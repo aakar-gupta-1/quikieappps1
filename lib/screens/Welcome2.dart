@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:page_transition/page_transition.dart';
 import 'package:quikieappps1/home/homepage.dart';
 
 
@@ -189,10 +190,8 @@ class welcomeScreen2State extends State<welcomeScreen2> {
                                   * Login Btn
                                   * */
                                     RaisedButton(
-                                      onPressed: (){Navigator.push(
-                                        context,
-                                        MaterialPageRoute(builder: (context) =>  HomePageScreen()),
-                                      );},
+                                      onPressed: (){Navigator.pushAndRemoveUntil(context, PageTransition(duration: Duration(milliseconds: 300), type: PageTransitionType.leftToRight, child: HomePageScreen()), ModalRoute.withName(""));
+                                      },
 
                                       textColor: Colors.white,
                                       padding: const EdgeInsets.all(0.0),

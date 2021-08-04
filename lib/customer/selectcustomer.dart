@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:page_transition/page_transition.dart';
 import 'package:quikieappps1/customer/addcustomer.dart';
 import 'package:quikieappps1/customer/createcustomer.dart';
 import 'package:quikieappps1/home/homepage.dart';
@@ -76,10 +77,8 @@ class selectcustomerState extends State<selectcustomer> {
               _index = val;
             });
             if(val == 0)
-            { Navigator.push(
-              context,
-              MaterialPageRoute(builder: (context) => HomePageScreen()),
-            );
+            { Navigator.pushAndRemoveUntil(context, PageTransition(duration: Duration(milliseconds: 300), type: PageTransitionType.leftToRight, child: HomePageScreen()), ModalRoute.withName(""));
+
 
               // Navigator.push(context, PageTransition(type: PageTransitionType.downToUp, child: DailyLiaScreen()));
             }

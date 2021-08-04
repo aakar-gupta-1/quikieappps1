@@ -7,6 +7,7 @@ import 'package:quikieappps1/home/popularmenu.dart';
 import 'package:quikieappps1/home/todaycustomers.dart';
 import 'package:quikieappps1/input_sample.dart';
 import 'package:quikieappps1/widgets/custom_bottom_navbar.dart';
+import'package:quikieappps1/assets/colors.dart';
 
 
 
@@ -150,11 +151,13 @@ class _HomePageScreenState extends State<HomePageScreen> {
     ))
 
     ),
-      Container(child:Stack(
+      Container(width: MediaQuery.of(context).size.width,
+          child:Stack(
         children: [
           Padding(
           padding: const EdgeInsets.all(10.0),
           child:Container(
+            width: MediaQuery.of(context).size.width,
             color:Color.fromRGBO(229,229,229,10),
         child: Row(children:[
           Text(
@@ -177,7 +180,7 @@ class _HomePageScreenState extends State<HomePageScreen> {
 
           Padding(padding:EdgeInsets.only(top:150),
               child:SizedBox(height: 290,
-             width:900,
+                width: MediaQuery.of(context).size.width,
              child: Tabview(),)),
 
 

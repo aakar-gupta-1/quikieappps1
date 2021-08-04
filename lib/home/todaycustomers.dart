@@ -10,6 +10,7 @@ class Todaycustomers extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(height: 100,
+      width: MediaQuery.of(context).size.width,
     child:
     ListView(
         scrollDirection: Axis.horizontal,
