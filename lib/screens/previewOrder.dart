@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_switch/flutter_switch.dart';
-import 'package:quikieappps1/design/placeOrder.dart';
+import 'package:quikieappps1/screens/placeOrder.dart';
 import 'package:quikieappps1/design/select_front_design.dart';
 import 'package:toggle_switch/toggle_switch.dart';
 import 'package:quikieappps1/assets/colors.dart';
@@ -181,88 +181,77 @@ class _PreviewOrderState extends State<PreviewOrder> {
     );
   }
 
+  Widget appBar() {
+    return Column(
+      children: [
+        SizedBox(height: 35),
+        Row(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            SizedBox(
+              width: 15,
+            ),
+            IconButton(
+              icon: Icon(
+                Icons.arrow_back_ios,
+                color: primaryColor,
+              ),
+              onPressed: () {},
+            ),
+            Padding(
+              padding: const EdgeInsets.symmetric(vertical: 10),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text("Customer Name",
+                      style: TextStyle(
+                          color: primaryColor,
+                          fontSize: 25,
+                          fontWeight: FontWeight.w500)),
+                  SizedBox(height: 5),
+                  Text("+91 99999 999999",
+                      style: TextStyle(
+                          color: grey,
+                          fontSize: 12,
+                          fontWeight: FontWeight.w500)),
+                  SizedBox(height: 5),
+                  Row(
+                    children: [
+                      Text("Order Type : ",
+                          style: TextStyle(
+                              color: grey,
+                              fontSize: 15,
+                              fontWeight: FontWeight.w500)),
+                      Text("Hand work Blouse",
+                          style: TextStyle(
+                              color: secondaryColor,
+                              fontSize: 15,
+                              fontWeight: FontWeight.w500)),
+                    ],
+                  ),
+                ],
+              ),
+            ),
+          ],
+        ),
+        Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 25, vertical: 5),
+          child: Divider(thickness: 1.5),
+        ),
+      ],
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
         backgroundColor: background,
-        // appBar: AppBar(
-        //   elevation: 0,
-        //   backgroundColor: background,
-        //   leading: SizedBox(
-        //     child: IconButton(
-        //       icon: Icon(
-        //         Icons.arrow_back_ios,
-        //         color: primaryColor,
-        //       ),
-        //       onPressed: () {},
-        //     ),
-        //   ),
-        //   title: Text("Customer Name",
-        //       style: TextStyle(
-        //           color: primaryColor,
-        //           fontSize: 25,
-        //           fontWeight: FontWeight.w500)),
-        // ),
         body: Container(
           child: SingleChildScrollView(
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                SizedBox(height: 35),
-                Row(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    SizedBox(
-                      width: 15,
-                    ),
-                    IconButton(
-                      icon: Icon(
-                        Icons.arrow_back_ios,
-                        color: primaryColor,
-                      ),
-                      onPressed: () {},
-                    ),
-                    Padding(
-                      padding: const EdgeInsets.symmetric(vertical: 10),
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Text("Customer Name",
-                              style: TextStyle(
-                                  color: primaryColor,
-                                  fontSize: 25,
-                                  fontWeight: FontWeight.w500)),
-                          SizedBox(height: 5),
-                          Text("+91 99999 999999",
-                              style: TextStyle(
-                                  color: grey,
-                                  fontSize: 12,
-                                  fontWeight: FontWeight.w500)),
-                          SizedBox(height: 5),
-                          Row(
-                            children: [
-                              Text("Order Type : ",
-                                  style: TextStyle(
-                                      color: grey,
-                                      fontSize: 15,
-                                      fontWeight: FontWeight.w500)),
-                              Text("Hand work Blouse",
-                                  style: TextStyle(
-                                      color: secondaryColor,
-                                      fontSize: 15,
-                                      fontWeight: FontWeight.w500)),
-                            ],
-                          ),
-                        ],
-                      ),
-                    ),
-                  ],
-                ),
-                Padding(
-                  padding:
-                      const EdgeInsets.symmetric(horizontal: 25, vertical: 5),
-                  child: Divider(thickness: 1.5),
-                ),
+                appBar(),
                 Padding(
                   padding:
                       const EdgeInsets.symmetric(horizontal: 25, vertical: 5),
@@ -302,6 +291,7 @@ class _PreviewOrderState extends State<PreviewOrder> {
                               "REVIEW MEASUREMENT",
                               style: TextStyle(
                                   color: textColor,
+                                  fontSize: 15,
                                   fontWeight: FontWeight.w600),
                             ),
                             Expanded(child: SizedBox()),

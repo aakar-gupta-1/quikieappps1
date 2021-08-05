@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:quikieappps1/assets/colors.dart';
 import 'package:quikieappps1/bodymeasure/measurement.dart';
-import 'package:quikieappps1/design/previewOrder.dart';
+import 'package:quikieappps1/screens/previewOrder.dart';
 
 import '../input_sample.dart';
 
