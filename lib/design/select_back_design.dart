@@ -2,17 +2,18 @@ import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:quikieappps1/assets/colors.dart';
 import 'package:quikieappps1/bodymeasure/measurement.dart';
-import 'package:quikieappps1/design/select_back_design.dart';
+import 'package:quikieappps1/design/select_front_design.dart';
+import 'package:quikieappps1/design/select_sleeve_design.dart';
 import 'package:quikieappps1/screens/previewOrder.dart';
 
 import '../input_sample.dart';
 
-class select_front_design extends StatefulWidget {
+class select_back_design extends StatefulWidget {
   @override
-  select_front_designState createState() => select_front_designState();
+  select_back_designState createState() => select_back_designState();
 }
 
-class select_front_designState extends State<select_front_design> {
+class select_back_designState extends State<select_back_design> {
   Widget categories(String text) {
     return Container(
         padding: EdgeInsets.symmetric(vertical: 6, horizontal: 10),
@@ -143,7 +144,7 @@ class select_front_designState extends State<select_front_design> {
                           padding: const EdgeInsets.symmetric(vertical: 10),
                           child: Column(
                             children: [
-                              Text("Select Front Design",
+                              Text("Select Back Design",
                                   style: TextStyle(
                                       color: Colors.white,
                                       fontSize: 25,
@@ -242,7 +243,8 @@ class select_front_designState extends State<select_front_design> {
                 onPressed: () {
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) => HomePage()),
+                    MaterialPageRoute(
+                        builder: (context) => select_front_design()),
                   );
                 },
                 child: Image.asset("assets/images/Previous.png"),
@@ -252,7 +254,7 @@ class select_front_designState extends State<select_front_design> {
                   Navigator.push(
                     context,
                     MaterialPageRoute(
-                        builder: (context) => select_back_design()),
+                        builder: (context) => select_sleeve_design()),
                   );
                 },
                 child: Image.asset("assets/images/Next.png"),
