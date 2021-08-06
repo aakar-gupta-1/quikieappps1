@@ -7,3 +7,5 @@ Color grey = Color.fromRGBO(145, 144, 154, 1);
 Color darkGrey = Color.fromRGBO(60, 60, 61, 1);
 Color labelGrey = Color.fromRGBO(151, 151, 151, 1);
 Color textColor = Color.fromRGBO(250, 250, 250, 1);
+Color labelGrey1 = Color.fromRGBO(183, 183, 184, 1);
+
