@@ -60,11 +60,13 @@ class PreLoginScreeDesign extends StatelessWidget {
               height: height * 0.5,
               child: Center(
                 child: Container(
-                  height: 209.23,
-                  width: 187.0,
+                  height: 300.23,
+                  width: 200.0,
                   margin: EdgeInsets.fromLTRB(94, 71, 94, 0),
-                  child: SvgPicture.asset(
-                    'assets/images/startlogo.svg',
+                  child: Image.asset(
+                    'assets/images/Group.png',
+                    fit: BoxFit.fill,
+
                   ),
                 ),
               ),
