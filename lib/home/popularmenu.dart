@@ -3,134 +3,6 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class Tabview extends StatelessWidget {
   var gridView1 =GridView.count(
-      primary: false,
-      padding: const EdgeInsets.all(10),
-      crossAxisSpacing: 10,
-      mainAxisSpacing: 20,
-      crossAxisCount: 4,
-      children: <Widget>[
-
-            Container(decoration: BoxDecoration(
-                       color: Colors.transparent,
-                borderRadius: BorderRadius.all(Radius.circular(12))),
-                  child: Column(
-                 children: [
-                     Expanded(
-                            flex: 9,
-                       child: ClipRRect(
-                     borderRadius: BorderRadius.all(Radius.circular(12)),
-                child: Image.asset('assets/images/user.jpg',
-                    fit: BoxFit.fill)),
-                 ),
-                    Expanded(flex: 5, child: Text("Hand Embroidery",textAlign: TextAlign.center,)),
-                         ],
-                      ),
-                  ),
-        Container(
-          decoration: BoxDecoration(
-              color: Colors.transparent,
-              borderRadius: BorderRadius.all(Radius.circular(12))),
-          child: Column(
-            children: [
-              Expanded(
-                flex: 9,
-                child: ClipRRect(
-                    borderRadius: BorderRadius.all(Radius.circular(12)),
-                    child: Image.asset('assets/images/user.jpg',
-                        fit: BoxFit.fill)),
-              ),
-              Expanded(flex: 5, child: Text("Machine Embroidery",textAlign: TextAlign.center,)),
-            ],
-          ),
-        ),
-        Container(
-          decoration: BoxDecoration(
-              color: Colors.transparent,
-              borderRadius: BorderRadius.all(Radius.circular(12))),
-          child: Column(
-            children: [
-              Expanded(
-                flex: 9,
-                child: ClipRRect(
-                    borderRadius: BorderRadius.all(Radius.circular(12)),
-                    child: Image.asset('assets/images/user.jpg',
-                        fit: BoxFit.fill)),
-              ),
-              Expanded(flex: 5, child: Text("Princes Cut Blouse",textAlign: TextAlign.center,)),
-            ],
-          ),
-        ),
-        Container(
-          decoration: BoxDecoration(
-              color: Colors.transparent,
-              borderRadius: BorderRadius.all(Radius.circular(12))),
-          child: Column(
-            children: [
-              Expanded(
-                flex: 9,
-                child: ClipRRect(
-                    borderRadius: BorderRadius.all(Radius.circular(12)),
-                    child: Image.asset('assets/images/user.jpg',
-                        fit: BoxFit.fill)),
-              ),
-              Expanded(flex: 5, child: Text("Katori Blouse",textAlign: TextAlign.center,)),
-            ],
-          ),
-        ),
-        Container(
-          decoration: BoxDecoration(
-              color: Colors.transparent,
-              borderRadius: BorderRadius.all(Radius.circular(12))),
-          child: Column(
-            children: [
-              Expanded(
-                flex: 9,
-                child: ClipRRect(
-                    borderRadius: BorderRadius.all(Radius.circular(12)),
-                    child: Image.asset('assets/images/user.jpg',
-                        fit: BoxFit.fill)),
-              ),
-              Expanded(flex: 5, child: Text("Lining Blouse",textAlign: TextAlign.center,)),
-            ],
-          ),
-        ),
-        Container(
-          decoration: BoxDecoration(
-              color: Colors.transparent,
-              borderRadius: BorderRadius.all(Radius.circular(12))),
-          child: Column(
-            children: [
-              Expanded(
-                flex: 9,
-                child: ClipRRect(
-                    borderRadius: BorderRadius.all(Radius.circular(12)),
-                    child: Image.asset('assets/images/user.jpg',
-                        fit: BoxFit.fill)),
-              ),
-              Expanded(flex: 5, child: Text("Lehenga Blouse",textAlign: TextAlign.center,)),
-            ],
-          ),
-        ),
-        Container(
-          decoration: BoxDecoration(
-              color: Colors.transparent,
-              borderRadius: BorderRadius.all(Radius.circular(12))),
-          child: Column(
-            children: [
-              Expanded(
-                flex: 9,
-                child: ClipRRect(
-                    borderRadius: BorderRadius.all(Radius.circular(12)),
-                    child: Image.asset('assets/images/user.jpg',
-                        fit: BoxFit.fill)),
-              ),
-              Expanded(flex: 5, child: Text("Blouse",textAlign: TextAlign.center,)),
-            ],
-          ),
-        ),
-      ],
-  );
-  var gridView2 =GridView.count(
     primary: false,
     padding: const EdgeInsets.all(10),
     crossAxisSpacing: 10,
@@ -143,11 +15,141 @@ class Tabview extends StatelessWidget {
           borderRadius: BorderRadius.all(Radius.circular(12))),
         child: Column(
           children: [
+
             Expanded(
               flex: 9,
               child: ClipRRect(
                   borderRadius: BorderRadius.all(Radius.circular(12)),
-                  child: Image.asset('assets/images/user.jpg',
+                  child: Image.asset('assets/images/Rectangle 540.png',
+                      fit: BoxFit.fill)),
+            ),
+            Expanded(flex: 5, child: Text("Hand Embroidery",textAlign: TextAlign.center,)),
+          ],
+        ),
+      ),
+      Container(
+        decoration: BoxDecoration(
+            color: Colors.transparent,
+            borderRadius: BorderRadius.all(Radius.circular(12))),
+        child: Column(
+          children: [
+            Expanded(
+              flex: 9,
+              child: ClipRRect(
+                  borderRadius: BorderRadius.all(Radius.circular(12)),
+                  child: Image.asset('assets/images/Rectangle 542.png',
+                      fit: BoxFit.fill)),
+            ),
+            Expanded(flex: 5, child: Text("Machine Embroidery",textAlign: TextAlign.center,)),
+          ],
+        ),
+      ),
+      Container(
+        decoration: BoxDecoration(
+            color: Colors.transparent,
+            borderRadius: BorderRadius.all(Radius.circular(12))),
+        child: Column(
+          children: [
+            Expanded(
+              flex: 9,
+              child: ClipRRect(
+                  borderRadius: BorderRadius.all(Radius.circular(12)),
+                  child: Image.asset('assets/images/Rectangle 544.png',
+                      fit: BoxFit.fill)),
+            ),
+            Expanded(flex: 5, child: Text("Princes Cut Blouse",textAlign: TextAlign.center,)),
+          ],
+        ),
+      ),
+      Container(
+        decoration: BoxDecoration(
+            color: Colors.transparent,
+            borderRadius: BorderRadius.all(Radius.circular(12))),
+        child: Column(
+          children: [
+            Expanded(
+              flex: 9,
+              child: ClipRRect(
+                  borderRadius: BorderRadius.all(Radius.circular(12)),
+                  child: Image.asset('assets/images/Rectangle 546.png',
+                      fit: BoxFit.fill)),
+            ),
+            Expanded(flex: 5, child: Text("Katori Blouse",textAlign: TextAlign.center,)),
+          ],
+        ),
+      ),
+      Container(
+        decoration: BoxDecoration(
+            color: Colors.transparent,
+            borderRadius: BorderRadius.all(Radius.circular(12))),
+        child: Column(
+          children: [
+            Expanded(
+              flex: 9,
+              child: ClipRRect(
+                  borderRadius: BorderRadius.all(Radius.circular(12)),
+                  child: Image.asset('assets/images/Rectangle 548.png',
+                      fit: BoxFit.fill)),
+            ),
+            Expanded(flex: 5, child: Text("Lining Blouse",textAlign: TextAlign.center,)),
+          ],
+        ),
+      ),
+      Container(
+        decoration: BoxDecoration(
+            color: Colors.transparent,
+            borderRadius: BorderRadius.all(Radius.circular(12))),
+        child: Column(
+          children: [
+            Expanded(
+              flex: 9,
+              child: ClipRRect(
+                  borderRadius: BorderRadius.all(Radius.circular(12)),
+                  child: Image.asset('assets/images/Rectangle 550.png',
+                      fit: BoxFit.fill)),
+            ),
+            Expanded(flex: 5, child: Text("Lehenga Blouse",textAlign: TextAlign.center,)),
+          ],
+        ),
+      ),
+      Container(
+        decoration: BoxDecoration(
+            color: Colors.transparent,
+            borderRadius: BorderRadius.all(Radius.circular(12))),
+        child: Column(
+          children: [
+            Expanded(
+              flex: 9,
+              child: ClipRRect(
+                  borderRadius: BorderRadius.all(Radius.circular(12)),
+                  child: Image.asset("assets/images/Rectangle 552.png",
+                      fit: BoxFit.fill)),
+            ),
+            Expanded(flex: 5, child: Text("Blouse",textAlign: TextAlign.center,)),
+          ],
+        ),
+      ),
+    ],
+  );
+  var gridView2 =GridView.count(
+    primary: false,
+    padding: const EdgeInsets.all(10),
+    crossAxisSpacing: 10,
+    mainAxisSpacing: 20,
+    crossAxisCount: 4,
+    children: <Widget>[
+
+      Container(decoration: BoxDecoration(
+          color: Colors.transparent,
+
+          borderRadius: BorderRadius.all(Radius.circular(12))),
+        child: Column(
+          children: [
+            Expanded(
+              flex: 9,
+              child: ClipRRect(
+                  borderRadius: BorderRadius.all(Radius.circular(12)),
+                  child: Image.asset('assets/images/Rectangle 540.png',
                       fit: BoxFit.fill)),
             ),
             Expanded(flex: 5, child: Text("Gown",textAlign: TextAlign.center,)),
@@ -164,7 +166,7 @@ class Tabview extends StatelessWidget {
               flex: 9,
               child: ClipRRect(
                   borderRadius: BorderRadius.all(Radius.circular(12)),
-                  child: Image.asset('assets/images/user.jpg',
+                  child: Image.asset('assets/images/Rectangle 542.png',
                       fit: BoxFit.fill)),
             ),
             Expanded(flex: 5, child: Text("Kurta",textAlign: TextAlign.center,)),
@@ -181,7 +183,7 @@ class Tabview extends StatelessWidget {
               flex: 9,
               child: ClipRRect(
                   borderRadius: BorderRadius.all(Radius.circular(12)),
-                  child: Image.asset('assets/images/user.jpg',
+                  child: Image.asset('assets/images/Rectangle 544.png',
                       fit: BoxFit.fill)),
             ),
             Expanded(flex: 5, child: Text("Salwar",textAlign: TextAlign.center,)),
@@ -198,7 +200,7 @@ class Tabview extends StatelessWidget {
               flex: 9,
               child: ClipRRect(
                   borderRadius: BorderRadius.all(Radius.circular(12)),
-                  child: Image.asset('assets/images/user.jpg',
+                  child: Image.asset('assets/images/Rectangle 546.png',
                       fit: BoxFit.fill)),
             ),
             Expanded(flex: 5, child: Text("Ghagra",textAlign: TextAlign.center,)),
@@ -215,7 +217,7 @@ class Tabview extends StatelessWidget {
               flex: 9,
               child: ClipRRect(
                   borderRadius: BorderRadius.all(Radius.circular(12)),
-                  child: Image.asset('assets/images/user.jpg',
+                  child: Image.asset('assets/images/Rectangle 548.png',
                       fit: BoxFit.fill)),
             ),
             Expanded(flex: 5, child: Text("Churidar",textAlign: TextAlign.center,)),
@@ -232,7 +234,7 @@ class Tabview extends StatelessWidget {
               flex: 9,
               child: ClipRRect(
                   borderRadius: BorderRadius.all(Radius.circular(12)),
-                  child: Image.asset('assets/images/user.jpg',
+                  child: Image.asset('assets/images/Rectangle 550.png',
                       fit: BoxFit.fill)),
             ),
             Expanded(flex: 5, child: Text("Lehenga Blouse",textAlign: TextAlign.center,)),
@@ -259,7 +261,7 @@ class Tabview extends StatelessWidget {
               flex: 9,
               child: ClipRRect(
                   borderRadius: BorderRadius.all(Radius.circular(12)),
-                  child: Image.asset('assets/images/user.jpg',
+                  child: Image.asset('assets/images/Rectangle 540.png',
                       fit: BoxFit.fill)),
             ),
             Expanded(flex: 5, child: Text("Chudi Bottom",textAlign: TextAlign.center,)),
@@ -276,7 +278,7 @@ class Tabview extends StatelessWidget {
               flex: 9,
               child: ClipRRect(
                   borderRadius: BorderRadius.all(Radius.circular(12)),
-                  child: Image.asset('assets/images/user.jpg',
+                  child: Image.asset('assets/images/Rectangle 542.png',
                       fit: BoxFit.fill)),
             ),
             Expanded(flex: 5, child: Text("Salwar Bottom",textAlign: TextAlign.center,)),
@@ -293,7 +295,7 @@ class Tabview extends StatelessWidget {
               flex: 9,
               child: ClipRRect(
                   borderRadius: BorderRadius.all(Radius.circular(12)),
-                  child: Image.asset('assets/images/user.jpg',
+                  child: Image.asset('assets/images/Rectangle 544.png',
                       fit: BoxFit.fill)),
             ),
             Expanded(flex: 5, child: Text("Patiala",textAlign: TextAlign.center,)),
@@ -310,7 +312,7 @@ class Tabview extends StatelessWidget {
               flex: 9,
               child: ClipRRect(
                   borderRadius: BorderRadius.all(Radius.circular(12)),
-                  child: Image.asset('assets/images/user.jpg',
+                  child: Image.asset('assets/images/Rectangle 546.png',
                       fit: BoxFit.fill)),
             ),
             Expanded(flex: 5, child: Text("Palzzo",textAlign: TextAlign.center,)),
@@ -327,7 +329,7 @@ class Tabview extends StatelessWidget {
               flex: 9,
               child: ClipRRect(
                   borderRadius: BorderRadius.all(Radius.circular(12)),
-                  child: Image.asset('assets/images/user.jpg',
+                  child: Image.asset('assets/images/Rectangle 548.png',
                       fit: BoxFit.fill)),
             ),
             Expanded(flex: 5, child: Text("Straight Pant",textAlign: TextAlign.center,)),
@@ -344,7 +346,7 @@ class Tabview extends StatelessWidget {
               flex: 9,
               child: ClipRRect(
                   borderRadius: BorderRadius.all(Radius.circular(12)),
-                  child: Image.asset('assets/images/user.jpg',
+                  child: Image.asset('assets/images/Rectangle 550.png',
                       fit: BoxFit.fill)),
             ),
             Expanded(flex: 5, child: Text("Lehenga Bottom",textAlign: TextAlign.center,)),
@@ -362,58 +364,58 @@ class Tabview extends StatelessWidget {
       crossAxisCount: 4,
       children: <Widget>[
 
-  Container(decoration: BoxDecoration(
-      color: Colors.transparent,
-      borderRadius: BorderRadius.all(Radius.circular(12))),
-      child: Column(
-    children: [
-    Expanded(
-        flex: 9,
-               child: ClipRRect(
-  borderRadius: BorderRadius.all(Radius.circular(12)),
-  child: Image.asset('assets/images/user.jpg',
-  fit: BoxFit.fill)),
-  ),
-  Expanded(flex: 5, child: Text("Saree Krosha",textAlign: TextAlign.center,)),
-  ],
-  ),
-  ),
-  Container(
-  decoration: BoxDecoration(
-  color: Colors.transparent,
-  borderRadius: BorderRadius.all(Radius.circular(12))),
-  child: Column(
-  children: [
-  Expanded(
-  flex: 9,
-  child: ClipRRect(
-  borderRadius: BorderRadius.all(Radius.circular(12)),
-  child: Image.asset('assets/images/user.jpg',
-  fit: BoxFit.fill)),
-  ),
-  Expanded(flex: 5, child: Text("Saree Zig Zag",textAlign: TextAlign.center,)),
-  ],
-  ),
-  ),
-  Container(
-  decoration: BoxDecoration(
-  color: Colors.transparent,
-  borderRadius: BorderRadius.all(Radius.circular(12))),
-  child: Column(
-  children: [
-  Expanded(
-  flex: 9,
-  child: ClipRRect(
-  borderRadius: BorderRadius.all(Radius.circular(12)),
-  child: Image.asset('assets/images/user.jpg',
-  fit: BoxFit.fill)),
-  ),
-  Expanded(flex: 5, child: Text("Saree Falls",textAlign: TextAlign.center,)),
-  ],
-  ),
-  ),
+        Container(decoration: BoxDecoration(
+            color: Colors.transparent,
+            borderRadius: BorderRadius.all(Radius.circular(12))),
+          child: Column(
+            children: [
+              Expanded(
+                flex: 9,
+                child: ClipRRect(
+                    borderRadius: BorderRadius.all(Radius.circular(12)),
+                    child: Image.asset('assets/images/Rectangle 540.png',
+                        fit: BoxFit.fill)),
+              ),
+              Expanded(flex: 5, child: Text("Saree Krosha",textAlign: TextAlign.center,)),
+            ],
+          ),
+        ),
+        Container(
+          decoration: BoxDecoration(
+              color: Colors.transparent,
+              borderRadius: BorderRadius.all(Radius.circular(12))),
+          child: Column(
+            children: [
+              Expanded(
+                flex: 9,
+                child: ClipRRect(
+                    borderRadius: BorderRadius.all(Radius.circular(12)),
+                    child: Image.asset('assets/images/Rectangle 542.png',
+                        fit: BoxFit.fill)),
+              ),
+              Expanded(flex: 5, child: Text("Saree Zig Zag",textAlign: TextAlign.center,)),
+            ],
+          ),
+        ),
+        Container(
+          decoration: BoxDecoration(
+              color: Colors.transparent,
+              borderRadius: BorderRadius.all(Radius.circular(12))),
+          child: Column(
+            children: [
+              Expanded(
+                flex: 9,
+                child: ClipRRect(
+                    borderRadius: BorderRadius.all(Radius.circular(12)),
+                    child: Image.asset('assets/images/Rectangle 544.png',
+                        fit: BoxFit.fill)),
+              ),
+              Expanded(flex: 5, child: Text("Saree Falls",textAlign: TextAlign.center,)),
+            ],
+          ),
+        ),
 
-  ]);
+      ]);
   @override
   Widget build(BuildContext context) {
     return DefaultTabController(

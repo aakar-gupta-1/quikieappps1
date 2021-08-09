@@ -64,7 +64,7 @@ class PreLoginScreeDesign extends StatelessWidget {
                   width: 200.0,
                   margin: EdgeInsets.fromLTRB(94, 71, 94, 0),
                   child: Image.asset(
-                    'assets/images/Group.png',
+                    'assets/images/Logo.png',
                     fit: BoxFit.fill,
 
                   ),
