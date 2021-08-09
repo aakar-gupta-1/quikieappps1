@@ -34,19 +34,24 @@ class UpdateBoutiqueDetailsDesign extends State<UpdateBoutiqueDetails> {
                 padding: EdgeInsets.fromLTRB(
                     0, MediaQuery.of(context).padding.top + 27, 0, 0),
                 child: Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
+                  mainAxisAlignment: MainAxisAlignment.spaceAround,
                   children: [
-                    //Icon(Icons.arrow_back_ios),
-                    Column(
-                      crossAxisAlignment: CrossAxisAlignment.center,
-                      children: [
-                        Text(
-                          "Boutique Detiles",
-                          style:
-                          TextStyle(fontSize: 25, color: Color(0xFF032B77)),
-                        ),
-                        Text("Add Boutique"),
-                      ],
+                    Align(
+                      alignment: Alignment.topLeft,
+                      child: Icon(Icons.arrow_back_ios,color: Color(0xFF032B77),)),
+                    Padding(
+                      padding: EdgeInsets.only(right: 60),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.center,
+                        children: [
+                          Text(
+                            "Boutique Detiles",
+                            style:
+                            TextStyle(fontSize: 25, color: Color(0xFF032B77)),
+                          ),
+                          Text("Add Boutique"),
+                        ],
+                      ),
                     ),
                   ],
                 ),
@@ -61,38 +66,35 @@ class UpdateBoutiqueDetailsDesign extends State<UpdateBoutiqueDetails> {
                   ),
                 ),
                 child: Column(
+                  mainAxisAlignment: MainAxisAlignment.spaceAround,
                   children: [
-                    Container(
+                   Container(
                       margin: EdgeInsets.all(15),
                       height: 100,
                       width: 100,
                       decoration: BoxDecoration(
                         shape: BoxShape.circle,
-                        color: Colors.blue,
+                        color: Color(0xff032B77),
                         border: Border.all(
                           color: Color.fromRGBO(3, 43, 119, 10),
                         ),
                       ),
-                      child: RawMaterialButton(
-                        onPressed: () {},
-                        shape: CircleBorder(),
-                        child: Icon(
-                          FontAwesomeIcons.user,
-                          color: Color.fromRGBO(3, 43, 119, 10),
-                        ),
-                      ),
+                      child: Image.asset('assets/images/addcustomerprofile.png'),
                     ),
-                    Column(crossAxisAlignment: CrossAxisAlignment.start,
+                    Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Padding(
                           padding: const EdgeInsets.fromLTRB(27, 0, 24, 0),
-                          child: Text("BOUTIQUE NAME"),
+                          child: Text("BOUTIQUE NAME",style: TextStyle(color: Color(0xFF032B77)),),
                         ),
                         Padding(
                           padding: const EdgeInsets.fromLTRB(24, 0, 24, 5),
                           child: TextField(
                             decoration: InputDecoration(
-                                border: OutlineInputBorder(),
+                                border: OutlineInputBorder(
+                                  borderRadius: BorderRadius.circular(10),
+                                ),
                                 hintText: 'Enter Boutique Name'),
                           ),
                         ),
@@ -102,13 +104,15 @@ class UpdateBoutiqueDetailsDesign extends State<UpdateBoutiqueDetails> {
                       children: [
                         Padding(
                           padding: const EdgeInsets.fromLTRB(27, 0, 24, 0),
-                          child: Text("Mobile Number"),
+                          child: Text("Mobile Number",style: TextStyle(color: Color(0xFF032B77)),),
                         ),
                         Padding(
                           padding: const EdgeInsets.fromLTRB(24, 0, 24, 5),
                           child: TextField(
                             decoration: InputDecoration(
-                                border: OutlineInputBorder(),
+                                border: OutlineInputBorder(
+                                  borderRadius: BorderRadius.circular(10),
+                                ),
                                 hintText: 'Enter Mobile Number'),
                           ),
                         ),
@@ -118,13 +122,15 @@ class UpdateBoutiqueDetailsDesign extends State<UpdateBoutiqueDetails> {
                       children: [
                         Padding(
                           padding: const EdgeInsets.fromLTRB(27, 0, 24, 0),
-                          child: Text("Address"),
+                          child: Text("Address",style: TextStyle(color: Color(0xFF032B77)),),
                         ),
                         Padding(
                           padding: const EdgeInsets.fromLTRB(24, 0, 24, 5),
                           child: TextField(
                             decoration: InputDecoration(
-                                border: OutlineInputBorder(),
+                                border: OutlineInputBorder(
+                                  borderRadius: BorderRadius.circular(10),
+                                ),
                                 hintText: 'Enter Your Address'),
                           ),
                         ),
@@ -134,13 +140,15 @@ class UpdateBoutiqueDetailsDesign extends State<UpdateBoutiqueDetails> {
                       children: [
                         Padding(
                           padding: const EdgeInsets.fromLTRB(27, 0, 24, 0),
-                          child: Text("E-Mail"),
+                          child: Text("E-Mail",style: TextStyle(color: Color(0xFF032B77)),),
                         ),
                         Padding(
                           padding: const EdgeInsets.fromLTRB(24, 0, 24, 10),
                           child: TextField(
                             decoration: InputDecoration(
-                                border: OutlineInputBorder(),
+                                border: OutlineInputBorder(
+                                  borderRadius: BorderRadius.circular(10),
+                                ),
                                 hintText: 'Enter E-Mail Address'),
                           ),
                         ),
@@ -150,8 +158,8 @@ class UpdateBoutiqueDetailsDesign extends State<UpdateBoutiqueDetails> {
                       onPressed: () {Navigator.push(
                         context,
                         MaterialPageRoute(builder: (context) => input_sample()),);},
-                      child: Text("Update Boutique Detiles"),
-                      color: Colors.blue,
+                      child: Text("Update Boutique Detiles",style: TextStyle(color: Colors.white),),
+                      color: Color(0xFF032B77),
                       minWidth: 283,
                       height: 50,
                       shape: RoundedRectangleBorder(

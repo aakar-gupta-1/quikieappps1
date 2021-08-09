@@ -345,10 +345,10 @@ class MyPainter extends CustomPainter {
     //文字水平方向居中对齐，竖直方向底对齐
     ui.Paragraph p = _buildText(valueStr, size.width);
     //获得文字的宽高
-    double halfWidth = p.minIntrinsicWidth / 2;
+    double halfWidth = p.minIntrinsicWidth / 3;
     double halfHeight = p.height / 2;
-    canvas.drawParagraph(
-        p, Offset(size.width / 2 - halfWidth, size.height - p.height));
+    // canvas.drawParagraph(
+    //     p, Offset(size.width / 2 - halfWidth, size.height - p.height));
   }
 
   ui.Paragraph _buildText(String content, double maxWidth) {

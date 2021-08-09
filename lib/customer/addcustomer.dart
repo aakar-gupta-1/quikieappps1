@@ -68,32 +68,30 @@ class _AddCustomerState extends State<AddCustomer> {
                       width: 100,
                       decoration: BoxDecoration(
                         shape: BoxShape.circle,
-                        color: Colors.blue,
+                        color: Color(0xff032B77),
                         border: Border.all(
                           color: Color.fromRGBO(3, 43, 119, 10),
                         ),
                       ),
-                      child: RawMaterialButton(
-                        onPressed: () {},
-                        shape: CircleBorder(),
-                        child: Icon(
-                          FontAwesomeIcons.user,
-                          color: Color.fromRGBO(3, 43, 119, 10),
-                        ),
-                      ),
+                      child: Image.asset('assets/images/addcustomerprofile.png'),
                     ),
                     Column(crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Padding(
                           padding: const EdgeInsets.fromLTRB(27, 0, 24, 0),
-                          child: Text("Customer Name"),
+                          child: Text("Customer Name",style: TextStyle(color: Color(0xff032B77),fontSize: 13,fontFamily: 'Poppins',fontWeight: FontWeight.w500),),
                         ),
                         Padding(
                           padding: const EdgeInsets.fromLTRB(24, 0, 24, 24),
-                          child: TextField(
-                            decoration: InputDecoration(
-                                border: OutlineInputBorder(),
-                                hintText: 'Enter Customer Name'),
+                          child: Container(
+                            decoration: BoxDecoration(borderRadius: BorderRadius.circular(30)),
+                            child: TextField(
+                              decoration: InputDecoration(
+                                  border: OutlineInputBorder(
+                                    borderRadius: BorderRadius.circular(20)
+                                  ),
+                                  hintText: 'Enter Customer Name'),
+                            ),
                           ),
                         ),
                       ],
@@ -102,14 +100,16 @@ class _AddCustomerState extends State<AddCustomer> {
                       children: [
                         Padding(
                           padding: const EdgeInsets.fromLTRB(27, 0, 24, 0),
-                          child: Text("Mobile Number"),
+                          child: Text("Mobile Number",style: TextStyle(color: Color(0xff032B77),fontSize: 13,fontFamily: 'Poppins',fontWeight: FontWeight.w500),),
                         ),
                         Padding(
                           padding: const EdgeInsets.fromLTRB(24, 0, 24, 50),
                           child: TextField(
                             decoration: InputDecoration(
-                                border: OutlineInputBorder(),
-                                hintText: 'Enter Customer Mobile Number'),
+                                border: OutlineInputBorder(
+                                   borderRadius: BorderRadius.circular(20)
+                                ),
+                                hintText: 'Enter Customer Mobile Number',),
                           ),
                         ),
                       ],
@@ -118,8 +118,8 @@ class _AddCustomerState extends State<AddCustomer> {
                       onPressed: () {Navigator.push(
                           context,
                           MaterialPageRoute(builder: (context) => UpdateBoutiqueDetails()),);},
-                      child: Text("Add Customer"),
-                      color: Colors.blue,
+                      child: Text("Add Customer",style: TextStyle(color: Colors.white,fontSize: 20,fontWeight: FontWeight.w500,fontFamily: 'Poppins'),),
+                      color: Color(0xff032B77),
                       minWidth: 283,
                       height: 54,
                       shape: RoundedRectangleBorder(

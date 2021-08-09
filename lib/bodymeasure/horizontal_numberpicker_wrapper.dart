@@ -10,6 +10,7 @@ class HorizontalNumberPickerWrapper extends StatefulWidget {
   final int maxValue;
   final int step;
   final String unit;
+  final String name;
   final String title;
 
   ///控件的宽度
@@ -51,6 +52,7 @@ class HorizontalNumberPickerWrapper extends StatefulWidget {
     this.step = 1,
     this.title="",
     this.unit = "",
+    this.name = "",
     this.widgetWidth = 100,
     this.subGridCountPerGrid = 10,
     this.subGridWidth = 8,
@@ -100,31 +102,34 @@ class HorizontalNumberPickerWrapperState
       crossAxisAlignment: CrossAxisAlignment.center,
       children: <Widget>[
         //上方选中值
-        Row(
-          mainAxisSize: MainAxisSize.min,
-          crossAxisAlignment: CrossAxisAlignment.baseline,
-          textBaseline: TextBaseline.alphabetic,
-          children: <Widget>[
-
-            Text(
-              widget.titleTransformer(_selectedValue),
-              style: TextStyle(
-                color: widget.titleTextColor,
-                fontSize: 40,
-                //fontFamily: "Montserrat",
+        Container(
+          margin: EdgeInsets.symmetric(vertical: 10),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceAround,
+            crossAxisAlignment: CrossAxisAlignment.baseline,
+            textBaseline: TextBaseline.alphabetic,
+            children: <Widget>[
+               Text(
+                ' ${widget.name}',
+                style: TextStyle(
+                  color: widget.titleTextColor,
+                  fontSize: 14,
+                  fontWeight: FontWeight.w700
+                  //fontFamily: "Montserrat",
+                ),
               ),
-            ),
-            Text(
-              ' ${widget.unit}',
-              style: TextStyle(
-                color: widget.titleTextColor,
-                fontSize: 14,
-                //fontFamily: "Montserrat",
+              Text(
+                widget.titleTransformer(_selectedValue),
+                style: TextStyle(
+                  color: widget.titleTextColor,
+                  fontSize: 20,
+                  fontWeight: FontWeight.w700
+                  //fontFamily: "Montserrat",
+                ),
               ),
-            ),
-          ],
+            ],
+          ),
         ),
-        Container(width: 0, height: 10),
         //可滚动标尺
         Stack(
           children: <Widget>[
@@ -150,32 +155,32 @@ class HorizontalNumberPickerWrapperState
               scaleTextColor: widget.scaleTextColor,
             ),
 
-            Positioned(
-              left: 0,
-              child: Container(
-                width: 20,
-                height: numberPickerHeight.toDouble(),
-                decoration: BoxDecoration(
-                  gradient: LinearGradient(colors: [
-                    Colors.white.withOpacity(0.8),
-                    Colors.white.withOpacity(0)
-                  ]),
-                ),
-              ),
-            ),
-            Positioned(
-              right: 0,
-              child: Container(
-                width: 20,
-                height: numberPickerHeight.toDouble(),
-                decoration: BoxDecoration(
-                  gradient: LinearGradient(colors: [
-                    Colors.white.withOpacity(0),
-                    Colors.white.withOpacity(0.8)
-                  ]),
-                ),
-              ),
-            ),
+            // Positioned(
+            //   left: 0,
+            //   child: Container(
+            //     width: 20,
+            //     height: numberPickerHeight.toDouble(),
+            //     decoration: BoxDecoration(
+            //       gradient: LinearGradient(colors: [
+            //         Colors.white.withOpacity(0.8),
+            //         Colors.white.withOpacity(0)
+            //       ]),
+            //     ),
+            //   ),
+            // ),
+            // Positioned(
+            //   right: 0,
+            //   child: Container(
+            //     width: 20,
+            //     height: numberPickerHeight.toDouble(),
+            //     decoration: BoxDecoration(
+            //       gradient: LinearGradient(colors: [
+            //         Colors.white.withOpacity(0),
+            //         Colors.white.withOpacity(0.8)
+            //       ]),
+            //     ),
+            //   ),
+            // ),
           ],
         ),
       ],

@@ -8,7 +8,6 @@ import 'package:quikieappps1/design/select_front_design.dart';
 import 'package:quikieappps1/home/popularmenu.dart';
 import 'package:quikieappps1/home/todaycustomers.dart';
 import 'package:quikieappps1/input_sample.dart';
-import 'package:quikieappps1/orders/orders.dart';
 import 'package:quikieappps1/widgets/custom_bottom_navbar.dart';
 import 'package:quikieappps1/assets/colors.dart';
 
@@ -24,10 +23,12 @@ class _HomePageScreenState extends State<HomePageScreen> {
 
   @override
   Widget build(BuildContext context) {
+    var height = MediaQuery.of(context).size.height;
+    var width = MediaQuery.of(context).size.width;
     return Scaffold(
       appBar: new AppBar(
         elevation: 0.0,
-        backgroundColor: Color.fromRGBO(229, 229, 229, 10),
+        backgroundColor:Color(0xffF4F8FC),
         title: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.start,
@@ -35,7 +36,7 @@ class _HomePageScreenState extends State<HomePageScreen> {
             Text(
               'Boutique Name',
               style: TextStyle(
-                  color: Color.fromRGBO(3, 43, 119, 10), fontSize: 22.0),
+                  color: Color.fromRGBO(3, 43, 119, 10), fontSize: 22.0,fontFamily: 'Poppins'),
             ),
             Text(
               'Today Mon, 17 sep',
@@ -46,26 +47,15 @@ class _HomePageScreenState extends State<HomePageScreen> {
         ),
         actions: <Widget>[
           Container(
-            decoration: BoxDecoration(
-              shape: BoxShape.circle,
-              color: Color(0xFFF2F3F7),
-              border: Border.all(
-                color: Color.fromRGBO(3, 43, 119, 10),
-              ),
-            ),
-            child: RawMaterialButton(
-              onPressed: () {},
-              shape: CircleBorder(),
-              child: Icon(
-                FontAwesomeIcons.user,
-                color: Color.fromRGBO(3, 43, 119, 10),
-              ),
+            child: Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Image.asset('assets/images/profileimg.png'),
             ),
           ),
         ],
       ),
       body: Container(
-        color: Color.fromRGBO(229, 229, 229, 10),
+        color: Color(0xffF4F8FC),
         child: Stack(children: [
           SingleChildScrollView(
               child: Container(
@@ -93,10 +83,12 @@ class _HomePageScreenState extends State<HomePageScreen> {
                                         CrossAxisAlignment.start,
                                     mainAxisAlignment: MainAxisAlignment.start,
                                     children: [
-                                      Row(children: [
-                                        Padding(
-                                          padding: EdgeInsets.only(left: 20.0),
-                                          child: Text(
+                                      Padding(
+                                        padding: const EdgeInsets.all(8.0),
+                                        child: Row(
+                                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                          children: [
+                                          Text(
                                             'Today',
                                             style: TextStyle(
                                               fontSize: 21.0,
@@ -107,10 +99,7 @@ class _HomePageScreenState extends State<HomePageScreen> {
                                             ),
                                             textAlign: TextAlign.center,
                                           ),
-                                        ),
-                                        Padding(
-                                          padding: EdgeInsets.only(left: 250.0),
-                                          child: Text(
+                                          Text(
                                             'Orders',
                                             style: TextStyle(
                                               fontSize: 10.0,
@@ -120,8 +109,8 @@ class _HomePageScreenState extends State<HomePageScreen> {
                                                   3, 49, 119, 10),
                                             ),
                                           ),
-                                        ),
-                                      ]),
+                                        ]),
+                                      ),
                                       Expanded(
                                         child: Padding(
                                           padding: EdgeInsets.only(left: 20.0),
@@ -170,8 +159,10 @@ class _HomePageScreenState extends State<HomePageScreen> {
                         padding: const EdgeInsets.all(10.0),
                         child: Container(
                           width: MediaQuery.of(context).size.width,
-                          color: Color.fromRGBO(229, 229, 229, 10),
-                          child: Row(children: [
+                          color: Color(0xffF4F8FC),
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: [
                             Text(
                               "Today's Customer",
                               style: TextStyle(
@@ -181,16 +172,13 @@ class _HomePageScreenState extends State<HomePageScreen> {
                               overflow: TextOverflow.clip,
                               textAlign: TextAlign.center,
                             ),
-                            Padding(
-                              padding: EdgeInsets.only(left: 180.0),
-                              child: Text(
-                                'View All',
-                                style: TextStyle(
-                                  fontSize: 16.0,
-                                  fontFamily: 'Productsans',
-                                  fontWeight: FontWeight.bold,
-                                  color: Color.fromRGBO(3, 49, 119, 10),
-                                ),
+                            Text(
+                              'View All',
+                              style: TextStyle(
+                                fontSize: 16.0,
+                                fontFamily: 'Productsans',
+                                fontWeight: FontWeight.bold,
+                                color: Color.fromRGBO(3, 49, 119, 10),
                               ),
                             ),
                           ]),
@@ -203,7 +191,7 @@ class _HomePageScreenState extends State<HomePageScreen> {
                       Padding(
                           padding: EdgeInsets.only(top: 150),
                           child: SizedBox(
-                            height: 290,
+                            height: height,
                             width: MediaQuery.of(context).size.width,
                             child: Tabview(),
                           )),
@@ -222,10 +210,6 @@ class _HomePageScreenState extends State<HomePageScreen> {
           });
 
           if (val == 1) {
-            Navigator.push(
-              context,
-              MaterialPageRoute(builder: (context) => Orders()),
-            );
             // Navigator.push(context, PageTransition(type: PageTransitionType.downToUp, child: DailyLiaScreen()));
           }
           if (val == 2) {

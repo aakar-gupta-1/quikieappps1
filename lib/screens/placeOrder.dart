@@ -101,7 +101,7 @@ class PlaceOrder extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        backgroundColor: background,
+        backgroundColor: Color(0xffF3F7FB),
         body: Stack(alignment: Alignment.topLeft, children: [
           Container(
               child: SingleChildScrollView(

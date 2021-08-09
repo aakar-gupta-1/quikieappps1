@@ -172,6 +172,11 @@ class select_front_designState extends State<select_front_design> {
                       ),
                       child: TextField(
                         decoration: InputDecoration(
+                          border: InputBorder.none,
+                          focusedBorder: InputBorder.none,
+                          enabledBorder: InputBorder.none,
+                          errorBorder: InputBorder.none,
+                          disabledBorder: InputBorder.none,
                           prefixIcon: Icon(Icons.search),
                         ),
                       ),

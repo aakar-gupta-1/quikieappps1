@@ -245,7 +245,7 @@ class _PreviewOrderState extends State<PreviewOrder> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        backgroundColor: background,
+        backgroundColor: Color(0xffF3F7FB),
         body: Container(
           child: SingleChildScrollView(
             child: Column(

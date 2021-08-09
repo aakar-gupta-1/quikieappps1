@@ -190,26 +190,28 @@ class PreLoginScreeDesign extends StatelessWidget {
                           ),
                         ),
                       ),
-                      Container(
-                        margin: EdgeInsets.fromLTRB(28, 17, 41, 0),
-                        padding: EdgeInsets.fromLTRB(36, 21, 40, 16),
-                        width: 309,
-                        height: 55,
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(30),
-                          color: Color(0xFFE5F3FD),
-                        ),
-                        child: GestureDetector(
-                            onTap: () {
-                              Navigator.push(
-                                  context,
-                                  MaterialPageRoute(
-                                      builder: (context) => welcomeScreen1()));
-                            },
+                      InkWell(
+                        onTap: (){
+                           Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                        builder: (context) => welcomeScreen1()));
+                        },
+                        child: Container(
+                          margin: EdgeInsets.symmetric(horizontal: width*0.1,vertical: height*0.03),
+                          width: 309,
+                          height: 55,
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(30),
+                            color: Color(0xFFE5F3FD),
+                          ),
+                          child: Center(
                             child: Text(
                               "Don’t have an account ? Register !",
                               style: TextStyle(fontSize: 12),
-                            )),
+                            ),
+                          ),
+                        ),
                       ),
                     ])),
           ],
