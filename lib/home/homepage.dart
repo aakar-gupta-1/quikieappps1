@@ -8,6 +8,7 @@ import 'package:quikieappps1/design/select_front_design.dart';
 import 'package:quikieappps1/home/popularmenu.dart';
 import 'package:quikieappps1/home/todaycustomers.dart';
 import 'package:quikieappps1/input_sample.dart';
+import 'package:quikieappps1/orders/orders.dart';
 import 'package:quikieappps1/widgets/custom_bottom_navbar.dart';
 import 'package:quikieappps1/assets/colors.dart';
 
@@ -221,6 +222,10 @@ class _HomePageScreenState extends State<HomePageScreen> {
           });
 
           if (val == 1) {
+            Navigator.push(
+              context,
+              MaterialPageRoute(builder: (context) => Orders()),
+            );
             // Navigator.push(context, PageTransition(type: PageTransitionType.downToUp, child: DailyLiaScreen()));
           }
           if (val == 2) {
