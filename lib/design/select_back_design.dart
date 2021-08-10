@@ -257,7 +257,7 @@ class select_back_designState extends State<select_back_design> {
                         builder: (context) => select_sleeve_design()),
                   );
                 },
-                child: Image.asset("assets/images/Next.png"),
+                child: Image.asset("assets/images/Next1.png"),
               )
             ],
           ),

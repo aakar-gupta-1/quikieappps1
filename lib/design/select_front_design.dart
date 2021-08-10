@@ -260,7 +260,7 @@ class select_front_designState extends State<select_front_design> {
                         builder: (context) => select_back_design()),
                   );
                 },
-                child: Image.asset("assets/images/Next.png"),
+                child: Image.asset("assets/images/Group 416.png"),
               )
             ],
           ),

@@ -255,7 +255,7 @@ class select_sleeve_designState extends State<select_sleeve_design> {
                     MaterialPageRoute(builder: (context) => PreviewOrder()),
                   );
                 },
-                child: Image.asset("assets/images/Next.png"),
+                child: Image.asset("assets/images/Group 416 (1).png"),
               )
             ],
           ),

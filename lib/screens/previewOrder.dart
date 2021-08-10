@@ -358,7 +358,7 @@ class _PreviewOrderState extends State<PreviewOrder> {
                     MaterialPageRoute(builder: (context) => PlaceOrder()),
                   );
                 },
-                child: Image.asset("assets/images/Next.png"),
+                child: Image.asset("assets/images/Group 416 (2).png"),
               )
             ],
           ),
