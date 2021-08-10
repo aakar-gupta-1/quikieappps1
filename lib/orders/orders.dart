@@ -17,14 +17,14 @@ class _OrdersState extends State<Orders> {
         padding: const EdgeInsets.all(6.0),
         child: Container(
           decoration: BoxDecoration(
-              color: Colors.pink, borderRadius: BorderRadius.circular(12)),
+              color: Colors.white, borderRadius: BorderRadius.circular(12)),
           // height: 125,
           child: Column(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               SizedBox(height: 12),
               Row(mainAxisAlignment: MainAxisAlignment.spaceEvenly, children: [
-                Image.asset(imagePath),
+                Image.asset(imagePath,height: 70,),
                 Column(
                   children: [
                     Text(num.toString(),
@@ -67,14 +67,16 @@ class _OrdersState extends State<Orders> {
 
   Widget tabBar() {
     return DefaultTabController(
-      length: 4,
+      length: 5,
       child: Column(
         children: [
           Container(
+            height: 40,
             padding: EdgeInsets.only(left: 7, right: 7),
             child: TabBar(
+              isScrollable: true,
               indicator: BoxDecoration(
-                  borderRadius: BorderRadius.circular(11),
+                  borderRadius: BorderRadius.circular(20),
                   color: Color.fromRGBO(69, 89, 210, 1)),
               unselectedLabelColor: Colors.black,
               indicatorColor: Colors.white,
@@ -90,7 +92,10 @@ class _OrdersState extends State<Orders> {
                 ),
                 Tab(
                   text: 'COMPLETED',
-                )
+                ),
+                Tab(
+                  text: 'ALL ORDERS',
+                ),
               ],
             ),
           ),
@@ -98,6 +103,7 @@ class _OrdersState extends State<Orders> {
           Expanded(
             child: TabBarView(
               children: [
+                categories(),
                 categories(),
                 categories(),
                 categories(),
@@ -297,7 +303,7 @@ class _OrdersState extends State<Orders> {
                   Row(
                     children: [
                       categoryCard(
-                          "assets/images/Group.png", "Pending ", 80, "ORDERS"),
+                          "assets/images/orders.png", "Pending ", 80, "ORDERS"),
                       categoryCard("assets/images/shopping-bag 1.png",
                           "Upcoming Orders ", 80, "ORDERS"),
                     ],
