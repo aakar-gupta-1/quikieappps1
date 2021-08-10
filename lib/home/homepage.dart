@@ -68,90 +68,68 @@ class _HomePageScreenState extends State<HomePageScreen> {
                     child: InkWell(
                         child: Padding(
                       padding: const EdgeInsets.all(10.0),
-                      child: Container(
                         child: Card(
                             color: Color.fromRGBO(132, 175, 255, 0.9),
                             elevation: 2.0,
                             shape: RoundedRectangleBorder(
                               borderRadius: BorderRadius.circular(11.0),
                             ),
-                            child: Stack(
-                              children: [
-                                Center(
-                                  child: Column(
-                                    crossAxisAlignment:
-                                        CrossAxisAlignment.start,
-                                    mainAxisAlignment: MainAxisAlignment.start,
-                                    children: [
-                                      Padding(
-                                        padding: const EdgeInsets.all(8.0),
-                                        child: Row(
-                                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                                          children: [
-                                          Text(
-                                            'Today',
-                                            style: TextStyle(
-                                              fontSize: 21.0,
-                                              fontFamily: 'Productsans',
-                                              fontWeight: FontWeight.bold,
-                                              color: Color.fromRGBO(
-                                                  3, 49, 119, 10),
-                                            ),
-                                            textAlign: TextAlign.center,
-                                          ),
-                                          Text(
-                                            'Orders',
-                                            style: TextStyle(
-                                              fontSize: 10.0,
-                                              fontFamily: 'Productsans',
-                                              fontWeight: FontWeight.bold,
-                                              color: Color.fromRGBO(
-                                                  3, 49, 119, 10),
-                                            ),
-                                          ),
-                                        ]),
-                                      ),
-                                      Expanded(
-                                        child: Padding(
-                                          padding: EdgeInsets.only(left: 20.0),
-                                          child: Text(
-                                            '    Orders to Deliver',
-                                            style: TextStyle(
-                                              fontSize: 15.0,
-                                              fontFamily: 'Productsans',
-                                              fontWeight: FontWeight.bold,
-                                              color: Color.fromRGBO(
-                                                  3, 49, 119, 10),
-                                            ),
-                                          ),
-                                        ),
-                                      ),
-                                      Padding(
-                                        padding: EdgeInsets.only(left: 20.0),
-                                        child: Text(
-                                          '    Pending Orders',
-                                          style: TextStyle(
-                                            fontSize: 15.0,
-                                            fontFamily: 'Productsans',
-                                            fontWeight: FontWeight.bold,
-                                            color:
-                                                Color.fromRGBO(3, 49, 119, 10),
-                                          ),
-                                        ),
-                                      ),
-                                      Expanded(
-                                          flex: 7,
-                                          child: Align(
-                                              alignment: Alignment(1, 1.5),
-                                              child: Image.asset(
-                                                  "assets/images/Background Design.png")))
-                                    ],
+                            child:Stack(children:[
+                            Container(
+                                decoration: BoxDecoration(
+                                  image: DecorationImage(
+                                    image: AssetImage("assets/images/Background Design.png"),
+
+
+                                    alignment: Alignment.bottomRight,
                                   ),
+
+                            ),
+                    ),
+                              Align(alignment: Alignment(-0.9,-0.85),
+                                child:Text("Today",style: TextStyle(
+                                    color: Color.fromRGBO(3,43,119,2),fontWeight: FontWeight.bold, fontSize: 20,fontFamily: 'Poppins'),),),
+
+                              Align(alignment: Alignment(-0.85,-0.5),
+                                child:Text("Orders to Deliver",style: TextStyle(
+                                    color: Colors.white, fontSize: 12,fontFamily: 'Poppins'),),),
+                              Align(alignment: Alignment(-0.97,-0.55),
+                                child:Text("10",style: TextStyle(
+                                    color: Colors.white, fontSize: 20,fontFamily: 'Poppins'),),),
+
+                              Align(alignment: Alignment(-0.84,-0.3),
+                                child:Text("Pending Orders ",style: TextStyle(
+                                    color: Colors.white, fontSize: 12,fontFamily: 'Poppins'),),),
+                              Align(alignment: Alignment(-0.95,-0.3),
+                                child:Text("5 ",style: TextStyle(
+                                    color: Colors.white, fontSize: 20,fontFamily: 'Poppins'),),),
+
+                              Align(alignment: Alignment(0.98,-0.9),
+                                  child:Text("Latest Designs",style: TextStyle(
+                                    color: Colors.black, fontSize: 9.0,fontFamily: 'Poppins'),),),
+                              Align(alignment: Alignment(-0.9,0.55),
+                                child:Text("₹ 32,400",style: TextStyle(
+                                    color: Color.fromRGBO(3,43,119,10),fontWeight: FontWeight.bold, fontSize: 20.0,fontFamily: 'Poppins'),),),
+                              Align(alignment: Alignment(-0.9,0.85),
+                                child:Text("Receivable Today",style: TextStyle(
+                                    color: Color.fromRGBO(3,43,119,10), fontWeight: FontWeight.bold,fontSize: 12.0,fontFamily: 'Poppins'),),),
+                              Container(
+                                decoration: BoxDecoration(
+                                  image: DecorationImage(
+                                    image: AssetImage("assets/images/Orders List.png"),
+
+
+                                    alignment: Alignment(0.98,-0.7),
+                                  ),
+
                                 ),
-                              ],
-                            )),
-                      ),
-                    ))),
+                              ),
+
+
+                            ])),
+                        ))),
+                                      
+
                 Container(
                     width: MediaQuery.of(context).size.width,
                     child: Stack(children: [
