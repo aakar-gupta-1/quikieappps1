@@ -4,6 +4,7 @@ import 'package:page_transition/page_transition.dart';
 import 'package:quikieappps1/customer/addcustomer.dart';
 import 'package:quikieappps1/customer/createcustomer.dart';
 import 'package:quikieappps1/home/homepage.dart';
+import 'package:quikieappps1/orders/customer_order.dart';
 import 'package:quikieappps1/widgets/custom_bottom_navbar.dart';
 
 class selectcustomer extends StatefulWidget {
