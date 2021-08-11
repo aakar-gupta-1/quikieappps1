@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:page_transition/page_transition.dart';
 import 'package:quikieappps1/bodymeasure/input_sample_numberpicker.dart';
-import 'package:quikieappps1/bodymeasure/measurement.dart';
+import 'package:quikieappps1/blouse/measurement.dart';
 import 'package:quikieappps1/home/homepage.dart';
 
 class input_sample extends StatefulWidget {
@@ -101,19 +102,30 @@ class input_sampleState extends State<input_sample> {
             children: <Widget>[
               FloatingActionButton(
                 onPressed: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(builder: (context) => HomePageScreen()),
-                  );
+                  Navigator.pushAndRemoveUntil(
+                      context,
+                      PageTransition(
+                          duration:
+                          Duration(milliseconds: 300),
+                          type:
+                          PageTransitionType.leftToRight,
+                          child: HomePageScreen()),
+                      ModalRoute.withName(""));
                 },
                 child: Image.asset("assets/images/Previous.png"),
               ),
               FloatingActionButton(
                 onPressed: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(builder: (context) => HomePage()),
-                  );
+                  Navigator.pushAndRemoveUntil(
+                      context,
+                      PageTransition(
+                          duration:
+                          Duration(milliseconds: 300),
+                          type:
+                          PageTransitionType.leftToRight,
+                          child: HomePage()),
+                      ModalRoute.withName(""));
+
                 },
                 child: Image.asset("assets/images/Next Step.png"),
               )

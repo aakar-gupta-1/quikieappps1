@@ -1,19 +1,20 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:quikieappps1/assets/colors.dart';
-import 'package:quikieappps1/bodymeasure/measurement.dart';
-import 'package:quikieappps1/design/select_front_design.dart';
-import 'package:quikieappps1/design/select_sleeve_design.dart';
+import 'package:quikieappps1/blouse/measurement.dart';
+import 'package:quikieappps1/blouse/design/select_back_design.dart';
 import 'package:quikieappps1/screens/previewOrder.dart';
 
-import '../input_sample.dart';
+import 'package:quikieappps1/blouse/input_sample.dart';
 
-class select_back_design extends StatefulWidget {
+class select_sleeve_design extends StatefulWidget {
   @override
-  select_back_designState createState() => select_back_designState();
+  select_sleeve_designState createState() => select_sleeve_designState();
 }
 
-class select_back_designState extends State<select_back_design> {
+class select_sleeve_designState extends State<select_sleeve_design> {
+  int _index;
+
   Widget categories(String text) {
     return Container(
         padding: EdgeInsets.symmetric(vertical: 6, horizontal: 10),
@@ -144,7 +145,7 @@ class select_back_designState extends State<select_back_design> {
                           padding: const EdgeInsets.symmetric(vertical: 10),
                           child: Column(
                             children: [
-                              Text("Select Back Design",
+                              Text("Select Sleeve Design",
                                   style: TextStyle(
                                       color: Colors.white,
                                       fontSize: 25,
@@ -233,34 +234,74 @@ class select_back_designState extends State<select_back_design> {
             ],
           ),
         ),
-        floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
-        floatingActionButton: Padding(
-          padding: const EdgeInsets.all(8.0),
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: <Widget>[
-              FloatingActionButton(
-                onPressed: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                        builder: (context) => select_front_design()),
-                  );
-                },
-                child: Image.asset("assets/images/Previous.png"),
-              ),
-              FloatingActionButton(
-                onPressed: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                        builder: (context) => select_sleeve_design()),
-                  );
-                },
-                child: Image.asset("assets/images/Next1.png"),
-              )
-            ],
+      bottomNavigationBar: BottomNavigationBar(
+
+        backgroundColor: Colors.white,
+        selectedItemColor: Color.fromRGBO(69, 89, 210, 10),
+        unselectedItemColor: Colors.black54,
+        onTap: (int val) {
+          setState(() {
+            _index = val;
+          });
+
+          if (val == 0) {
+            Navigator.push(
+              context,
+              MaterialPageRoute(builder: (context) => select_back_design()),
+            );
+            // Navigator.push(context, PageTransition(type: PageTransitionType.downToUp, child: DailyLiaScreen()));
+          }
+          if (val == 1) {
+            Navigator.push(
+              context,
+              MaterialPageRoute(builder: (context) => PreviewOrder()),
+            );
+            // Navigator.push(context, PageTransition(type: PageTransitionType.downToUp, child: MyHomePage()));
+          }
+
+
+        },
+        currentIndex: 0,
+        items: [
+          BottomNavigationBarItem(
+              title: Text(''),
+              icon: Image.asset('assets/images/Previous.png')),
+
+
+
+          BottomNavigationBarItem(
+            icon: Image.asset('assets/images/Group 416 (1).png'),
+            title: Text(''),
+
           ),
-        ));
+
+
+          //FloatingNavbarItem(icon: Icons.help_outline_rounded, title: 'Help Desk'),
+
+
+        ],
+      ),
+      floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
+      floatingActionButton: Padding(
+          padding: const EdgeInsets.only(bottom: 50),
+
+          child:
+          Column(mainAxisAlignment: MainAxisAlignment.end,
+              children:[ FloatingActionButton(
+                backgroundColor: Color.fromRGBO(3,43,119,10),
+
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => HomePage()),
+                  );
+                },
+                child: Icon(Icons.add,color: Colors.white,),
+              ),
+                Text("Upload Your Photo")
+
+
+              ])),
+    );
   }
 }

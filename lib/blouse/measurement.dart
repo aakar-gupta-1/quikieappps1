@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:quikieappps1/design/select_front_design.dart';
-import 'package:quikieappps1/input_sample.dart';
+import 'package:quikieappps1/blouse/design/select_front_design.dart';
+import 'package:quikieappps1/blouse/input_sample.dart';
 
-import 'horizontal_numberpicker_wrapper.dart';
+import '../bodymeasure/horizontal_numberpicker_wrapper.dart';
 
 class HomePage extends StatefulWidget {
   @override

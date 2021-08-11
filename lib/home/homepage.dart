@@ -3,11 +3,11 @@ import 'package:flutter/services.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:quikieappps1/customer/addcustomer.dart';
 import 'package:quikieappps1/customer/selectcustomer.dart';
-import 'package:quikieappps1/design/design.dart';
-import 'package:quikieappps1/design/select_front_design.dart';
+import 'package:quikieappps1/blouse/design/design.dart';
+import 'package:quikieappps1/blouse/design/select_front_design.dart';
 import 'package:quikieappps1/home/popularmenu.dart';
 import 'package:quikieappps1/home/todaycustomers.dart';
-import 'package:quikieappps1/input_sample.dart';
+import 'package:quikieappps1/blouse/input_sample.dart';
 import 'package:quikieappps1/orders/orders.dart';
 import 'package:quikieappps1/widgets/custom_bottom_navbar.dart';
 import 'package:quikieappps1/assets/colors.dart';
@@ -91,7 +91,7 @@ class _HomePageScreenState extends State<HomePageScreen> {
                                 child:Text("Today",style: TextStyle(
                                     color: Color.fromRGBO(3,43,119,2),fontWeight: FontWeight.bold, fontSize: 20,fontFamily: 'Poppins'),),),
 
-                              Align(alignment: Alignment(-0.85,-0.5),
+                              Align(alignment: Alignment(-0.84,-0.5),
                                 child:Text("Orders to Deliver",style: TextStyle(
                                     color: Colors.white, fontSize: 12,fontFamily: 'Poppins'),),),
                               Align(alignment: Alignment(-0.97,-0.55),

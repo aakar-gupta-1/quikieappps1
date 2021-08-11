@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:page_transition/page_transition.dart';
 import 'package:quikieappps1/assets/colors.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:quikieappps1/bill/generatedbill.dart';
+import 'package:quikieappps1/screens/previewOrder.dart';
 
 class PlaceOrder extends StatelessWidget {
   Widget appBar() {
@@ -16,6 +19,7 @@ class PlaceOrder extends StatelessWidget {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
+
                   Container(
                     child: Image.asset("assets/images/Butique Profile.png"),
                   ),
@@ -481,6 +485,20 @@ class PlaceOrder extends StatelessWidget {
                     ),
                   ]),
                 ),
+                GestureDetector(
+    // behavior: HitTestBehavior.translucent,
+              onTap: () {
+                Navigator.pushAndRemoveUntil(
+                    context,
+                   PageTransition(
+                  duration:
+                   Duration(milliseconds: 300),
+                 type:
+                    PageTransitionType.leftToRight,
+                   child: GeneratedBill()),
+                 ModalRoute.withName(""));
+                 },
+                 child:
                 Container(
                   margin: EdgeInsets.all(15),
                   height: 55,
@@ -501,11 +519,19 @@ class PlaceOrder extends StatelessWidget {
                     ],
                   ),
                 ),
-              ]))),
+                )]))),
           GestureDetector(
             // behavior: HitTestBehavior.translucent,
             onTap: () {
-              Navigator.pop(context);
+              Navigator.pushAndRemoveUntil(
+                  context,
+                  PageTransition(
+                      duration:
+                      Duration(milliseconds: 300),
+                      type:
+                      PageTransitionType.leftToRight,
+                      child: PreviewOrder()),
+                  ModalRoute.withName(""));
             },
             child: Container(
               padding: EdgeInsets.only(top: 50, left: 15),

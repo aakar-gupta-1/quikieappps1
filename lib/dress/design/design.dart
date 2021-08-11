@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:quikieappps1/assets/colors.dart';
-import 'package:quikieappps1/bodymeasure/measurement.dart';
+import 'package:quikieappps1/blouse/measurement.dart';
 import 'package:quikieappps1/screens/previewOrder.dart';
 
-import '../input_sample.dart';
+import 'package:quikieappps1/blouse/input_sample.dart';
 
 class Design extends StatefulWidget {
   @override
@@ -12,11 +12,23 @@ class Design extends StatefulWidget {
 }
 
 class DesignState extends State<Design> {
+  Widget category(String text) {
+    return Container(
+        padding: EdgeInsets.symmetric(vertical: 6, horizontal: 10),
+        decoration: BoxDecoration(
+            color: Color.fromRGBO(3,43,119, 1),
+            borderRadius: BorderRadius.circular(19),
+            border: Border.all(color: labelGrey)),
+        child: Text(
+          text,
+          style: TextStyle(fontSize: 15, color: Colors.white),
+        ));
+  }
   Widget categories(String text) {
     return Container(
         padding: EdgeInsets.symmetric(vertical: 6, horizontal: 10),
         decoration: BoxDecoration(
-            color: Color.fromRGBO(55, 55, 55, 1),
+            color: Color.fromRGBO(151, 151, 151,1),
             borderRadius: BorderRadius.circular(24),
             border: Border.all(color: labelGrey)),
         child: Text(

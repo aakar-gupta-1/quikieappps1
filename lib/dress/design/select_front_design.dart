@@ -1,24 +1,39 @@
-import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:quikieappps1/assets/colors.dart';
-import 'package:quikieappps1/bodymeasure/measurement.dart';
-import 'package:quikieappps1/design/select_back_design.dart';
+import 'package:quikieappps1/dress/dress_measurement.dart';
+import 'package:quikieappps1/dress/design/select_back_design.dart';
 import 'package:quikieappps1/screens/previewOrder.dart';
+import 'package:flutter/material.dart';
 
-import '../input_sample.dart';
+import 'package:quikieappps1/blouse/input_sample.dart';
+import 'package:quikieappps1/widgets/custom_bottom_navbar.dart';
 
-class select_sleeve_design extends StatefulWidget {
+class select_front_design extends StatefulWidget {
   @override
-  select_sleeve_designState createState() => select_sleeve_designState();
+  select_front_designState createState() => select_front_designState();
 }
 
-class select_sleeve_designState extends State<select_sleeve_design> {
+class select_front_designState extends State<select_front_design> {
+  int _index;
+
   Widget categories(String text) {
     return Container(
         padding: EdgeInsets.symmetric(vertical: 6, horizontal: 10),
         decoration: BoxDecoration(
             color: Color.fromRGBO(55, 55, 55, 1),
             borderRadius: BorderRadius.circular(24),
+            border: Border.all(color: labelGrey)),
+        child: Text(
+          text,
+          style: TextStyle(fontSize: 15, color: Colors.white),
+        ));
+  }
+  Widget category(String text) {
+    return Container(
+        padding: EdgeInsets.symmetric(vertical: 6, horizontal: 10),
+        decoration: BoxDecoration(
+            color: Color.fromRGBO(3,43,119,10),
+            borderRadius: BorderRadius.circular(19),
             border: Border.all(color: labelGrey)),
         child: Text(
           text,
@@ -123,7 +138,7 @@ class select_sleeve_designState extends State<select_sleeve_design> {
           child: Column(
             children: [
               Container(
-                color: primaryColor,
+                color: Color.fromRGBO(244, 248, 252,10),
                 child: Column(
                   children: [
                     SizedBox(height: 35),
@@ -134,7 +149,7 @@ class select_sleeve_designState extends State<select_sleeve_design> {
                           width: 20,
                         ),
                         IconButton(
-                          icon: Icon(Icons.arrow_back_ios, color: Colors.white),
+                          icon: Icon(Icons.arrow_back_ios, color: Color.fromRGBO(3,43,119,10)),
                           onPressed: () {
                             Navigator.pop(context, true);
                           },
@@ -143,9 +158,9 @@ class select_sleeve_designState extends State<select_sleeve_design> {
                           padding: const EdgeInsets.symmetric(vertical: 10),
                           child: Column(
                             children: [
-                              Text("Select Sleeve Design",
+                              Text("Select Front Design",
                                   style: TextStyle(
-                                      color: Colors.white,
+                                      color: Color.fromRGBO(3,43,119,10),
                                       fontSize: 25,
                                       fontWeight: FontWeight.w500)),
                               SizedBox(height: 5),
@@ -153,7 +168,7 @@ class select_sleeve_designState extends State<select_sleeve_design> {
                                 child: Text("Select Design or Upload Your Own",
                                     textAlign: TextAlign.center,
                                     style: TextStyle(
-                                        color: Colors.white,
+                                        color: Colors.black,
                                         fontSize: 8,
                                         fontWeight: FontWeight.w300)),
                               ),
@@ -162,6 +177,18 @@ class select_sleeve_designState extends State<select_sleeve_design> {
                           ),
                         ),
                       ],
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.symmetric(vertical: 5),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                        children: [
+                          category("Front Design"),
+                          category("Back Design"),
+                          category("Sleeves Design"),
+
+                        ],
+                      ),
                     ),
                     Container(
                       height: 32,
@@ -172,6 +199,11 @@ class select_sleeve_designState extends State<select_sleeve_design> {
                       ),
                       child: TextField(
                         decoration: InputDecoration(
+                          border: InputBorder.none,
+                          focusedBorder: InputBorder.none,
+                          enabledBorder: InputBorder.none,
+                          errorBorder: InputBorder.none,
+                          disabledBorder: InputBorder.none,
                           prefixIcon: Icon(Icons.search),
                         ),
                       ),
@@ -191,16 +223,7 @@ class select_sleeve_designState extends State<select_sleeve_design> {
                   ],
                 ),
               ),
-              Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: Row(
-                  children: [
-                    imageContainer("Front Design"),
-                    imageContainer("Back Design"),
-                    imageContainer("Sleeve Design"),
-                  ],
-                ),
-              ),
+
               Padding(
                 padding: const EdgeInsets.all(8.0),
                 child: Row(
@@ -232,33 +255,74 @@ class select_sleeve_designState extends State<select_sleeve_design> {
             ],
           ),
         ),
+        bottomNavigationBar: BottomNavigationBar(
+
+          backgroundColor: Colors.white,
+          selectedItemColor: Color.fromRGBO(69, 89, 210, 10),
+          unselectedItemColor: Colors.black54,
+          onTap: (int val) {
+            setState(() {
+              _index = val;
+            });
+
+            if (val == 0) {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => HomePage()),
+              );
+              // Navigator.push(context, PageTransition(type: PageTransitionType.downToUp, child: DailyLiaScreen()));
+            }
+            if (val == 1) {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => select_back_design()),
+              );
+              // Navigator.push(context, PageTransition(type: PageTransitionType.downToUp, child: MyHomePage()));
+            }
+
+
+          },
+          currentIndex: 0,
+          items: [
+            BottomNavigationBarItem(
+              title: Text(''),
+                icon: Image.asset('assets/images/Previous.png')),
+
+
+
+            BottomNavigationBarItem(
+                icon: Image.asset('assets/images/Group 416.png'),
+              title: Text(''),
+
+            ),
+
+
+            //FloatingNavbarItem(icon: Icons.help_outline_rounded, title: 'Help Desk'),
+
+
+          ],
+        ),
         floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
         floatingActionButton: Padding(
-          padding: const EdgeInsets.all(8.0),
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: <Widget>[
-              FloatingActionButton(
+          padding: const EdgeInsets.only(bottom: 50),
+
+          child:
+              Column(mainAxisAlignment: MainAxisAlignment.end,
+                  children:[ FloatingActionButton(
+            backgroundColor: Color.fromRGBO(3,43,119,10),
+
                 onPressed: () {
                   Navigator.push(
                     context,
-                    MaterialPageRoute(
-                        builder: (context) => select_back_design()),
+                    MaterialPageRoute(builder: (context) => HomePage()),
                   );
                 },
-                child: Image.asset("assets/images/Previous.png"),
+                child: Icon(Icons.add,color: Colors.white,),
               ),
-              FloatingActionButton(
-                onPressed: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(builder: (context) => PreviewOrder()),
-                  );
-                },
-                child: Image.asset("assets/images/Group 416 (1).png"),
-              )
-            ],
-          ),
-        ));
+              Text("Upload Your Photo")
+
+
+        ])),
+        );
   }
 }

@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_switch/flutter_switch.dart';
+import 'package:quikieappps1/dress/design/select_sleeve_design.dart';
 import 'package:quikieappps1/screens/placeOrder.dart';
-import 'package:quikieappps1/blouse/design/select_front_design.dart';
+import 'package:quikieappps1/dress/design/select_front_design.dart';
 import 'package:toggle_switch/toggle_switch.dart';
 import 'package:quikieappps1/assets/colors.dart';
 
@@ -222,7 +223,7 @@ class _PreviewOrderState extends State<PreviewOrder> {
                               color: grey,
                               fontSize: 15,
                               fontWeight: FontWeight.w500)),
-                      Text("Hand work Blouse",
+                      Text("Salwar",
                           style: TextStyle(
                               color: secondaryColor,
                               fontSize: 15,
@@ -254,7 +255,7 @@ class _PreviewOrderState extends State<PreviewOrder> {
                 appBar(),
                 Padding(
                   padding:
-                      const EdgeInsets.symmetric(horizontal: 25, vertical: 5),
+                  const EdgeInsets.symmetric(horizontal: 25, vertical: 5),
                   child: Text("Selected Images",
                       style: TextStyle(
                           color: grey,
@@ -268,7 +269,7 @@ class _PreviewOrderState extends State<PreviewOrder> {
                       Container(
                         decoration: BoxDecoration(
                             borderRadius:
-                                BorderRadius.all(Radius.circular(20))),
+                            BorderRadius.all(Radius.circular(20))),
                         child: Column(
                           children: [
                             selectedImage(true),
@@ -283,7 +284,7 @@ class _PreviewOrderState extends State<PreviewOrder> {
                         decoration: BoxDecoration(
                             color: primaryColor,
                             borderRadius:
-                                BorderRadius.all(Radius.circular(20))),
+                            BorderRadius.all(Radius.circular(20))),
                         child: Row(
                           children: [
                             Expanded(child: SizedBox()),
@@ -300,20 +301,18 @@ class _PreviewOrderState extends State<PreviewOrder> {
                       ),
                       Padding(
                         padding:
-                            const EdgeInsets.only(top: 14, left: 27, right: 39),
+                        const EdgeInsets.only(top: 14, left: 27, right: 39),
                         child: Column(
                           children: [
                             toggle("PIPING", 0),
                             Divider(),
-                            toggle("ZIP TYPE", 1),
+                            toggle("Back Zip", 1),
                             SizedBox(height: 10),
-                            if (status[1]) zipType(),
-                            SizedBox(height: 5),
+
                             Divider(),
-                            toggle("HOOKS", 2),
+                            toggle("Lining", 2),
                             SizedBox(height: 10),
-                            if (status[2]) hooks(),
-                            SizedBox(height: 5),
+
                             Divider(),
                             SizedBox(height: 10),
                             Row(
@@ -346,7 +345,7 @@ class _PreviewOrderState extends State<PreviewOrder> {
                   Navigator.push(
                     context,
                     MaterialPageRoute(
-                        builder: (context) => select_front_design()),
+                        builder: (context) => select_sleeve_design()),
                   );
                 },
                 child: Image.asset("assets/images/Previous.png"),
