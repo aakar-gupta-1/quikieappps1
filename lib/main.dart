@@ -179,7 +179,7 @@ class PreLoginScreeDesign extends StatelessWidget {
                                           context,
                                           MaterialPageRoute(
                                               builder: (context) =>
-                                                  welcomeScreen2()),
+                                                  Review()),
                                         );
                                       }, //do something,
                                     ),

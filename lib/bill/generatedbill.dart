@@ -1,6 +1,8 @@
 import 'package:dotted_line/dotted_line.dart';
 import 'package:flutter/cupertino.dart';
 import "package:flutter/material.dart";
+import 'package:page_transition/page_transition.dart';
+import 'package:quikieappps1/blouse/review.dart';
 
 class GeneratedBill extends StatefulWidget {
   @override
@@ -461,8 +463,21 @@ class GeneratedBillState extends State<GeneratedBill> {
                               )
                             ],
                           ),
-                        ),
-                        Container(
+                        ), GestureDetector(
+                      // behavior: HitTestBehavior.translucent,
+                        onTap: () {
+                          Navigator.pushAndRemoveUntil(
+                              context,
+                              PageTransition(
+                                  duration:
+                                  Duration(milliseconds: 300),
+                                  type:
+                                  PageTransitionType.leftToRight,
+                                  child: Review()),
+                              ModalRoute.withName(""));
+                        },
+                        child:
+                         Container(
                           margin: EdgeInsets.symmetric(vertical: 20),
                           height: 43,
                           width: 330,
@@ -477,8 +492,8 @@ class GeneratedBillState extends State<GeneratedBill> {
                                 fontWeight: FontWeight.w500,
                                 fontSize: 14),
                           )),
-                        )
-                      ])),
+                        ))]),
+                      ),
                     ),
                   ])),
                 ),

@@ -1,15 +1,19 @@
+import 'package:dotted_line/dotted_line.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:quikieappps1/assets/colors.dart';
 
 
-class review extends StatefulWidget {
+class Review extends StatefulWidget {
   @override
   reviewState createState() => reviewState();
 }
 
-class reviewState extends State<review> {
+class reviewState extends State<Review> {
   int _index;
+
+
+  
 
   Widget appBar() {
 
@@ -142,6 +146,7 @@ class reviewState extends State<review> {
     );
   }
   Widget picWithHead(String head, String subHead) {
+    var width = MediaQuery.of(context).size.width;
     return Flexible(
       child: Container(
         padding: EdgeInsets.all(5),
@@ -246,6 +251,7 @@ class reviewState extends State<review> {
   }
   @override
   Widget build(BuildContext context) {
+    var width = MediaQuery.of(context).size.width;
     return Scaffold(
         backgroundColor: Color(0xffF3F7FB),
         body: Container(
@@ -272,21 +278,334 @@ class reviewState extends State<review> {
                           ],
                         ),
                       ),
-                      SizedBox(height: 17,
+
+                      SizedBox(height: 10),
+                      DottedLine(
+                        direction: Axis.horizontal,
+                        lineLength: width/1.2,
+                        lineThickness: 1.0,
+                        dashLength: 4.0,
+                        dashColor: Color.fromRGBO(196,196,196,10),
+                        dashRadius: 0.0,
+                        dashGapLength: 4.0,
+                        dashGapColor: Colors.transparent,
+                        dashGapRadius: 0.0,
                       ),
+                      SizedBox(height: 7),
                       Text("Customer Measurement",style: TextStyle(color: Color.fromRGBO(151,151,151,10),fontSize: 15,
                         fontWeight: FontWeight.w400)),
+
                       SizedBox(height: 7),
+
                       Container(
                         height: 327,
                         width:  MediaQuery.of(context).size.width-10,
                         color: Colors.white,
                         child: Card(
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(15.0),
+                          ),
+                          child: Column(
+                            children: [
+                              SizedBox(height:8,),
+                              Row(children: [
+                                Column(children:[Padding(padding: EdgeInsets.only(left: 50),
+                                child:Text('Full Length')),
+                                Padding(padding: EdgeInsets.only(top: 3,left: 65),
+                                child:Text('23.25'))]),
+                                SizedBox(width: 44,),
+                                DottedLine(
+                                  direction: Axis.vertical,
+                                  lineLength: 52.5,
+                                  lineThickness: 1.0,
+                                  dashLength: 4.0,
+                                  dashColor: Color.fromRGBO(196,196,196,10),
+                                  dashRadius: 0.0,
+                                  dashGapLength: 4.0,
+                                  dashGapColor: Colors.transparent,
+                                  dashGapRadius: 0.0,
+                                ),
+                                SizedBox(width: 48,),
+                                Column(children:[Padding(padding: EdgeInsets.only(right: 65),
+                                    child:Text('Shoulder')),
+                                  Padding(padding: EdgeInsets.only(top: 3,right: 72),
+                                      child:Text('13.50'))]),
+                              ],
+                              ),
+                              SizedBox(height: 5.5,),
+                              DottedLine(
+                                direction: Axis.horizontal,
+                                lineLength: width/2,
+                                lineThickness: 1.0,
+                                dashLength: 4.0,
+                                dashColor: Color.fromRGBO(196,196,196,10),
+                                dashRadius: 0.0,
+                                dashGapLength: 4.0,
+                                dashGapColor: Colors.transparent,
+                                dashGapRadius: 0.0,
+                              ),
+                              SizedBox(height: 6.5,),
+                              Row(children: [
+                                Column(children:[Padding(padding: EdgeInsets.only(left: 50),
+                                    child:Text('Chest Round')),
+                                  Padding(padding: EdgeInsets.only(top: 3,left: 65),
+                                      child:Text('23.25'))]),
+                                SizedBox(width: 44,),
+                                DottedLine(
+                                  direction: Axis.vertical,
+                                  lineLength: 52.5,
+                                  lineThickness: 1.0,
+                                  dashLength: 4.0,
+                                  dashColor: Color.fromRGBO(196,196,196,10),
+                                  dashRadius: 0.0,
+                                  dashGapLength: 4.0,
+                                  dashGapColor: Colors.transparent,
+                                  dashGapRadius: 0.0,
+                                ),
+                                SizedBox(width: 48,),
+                                Column(children:[Padding(padding: EdgeInsets.only(right: 65),
+                                    child:Text('Waist Round')),
+                                  Padding(padding: EdgeInsets.only(top: 3,right: 72),
+                                      child:Text('13.50'))]),
+                              ],
+                              ),
+                              SizedBox(height: 5.5,),
+                              DottedLine(
+                                direction: Axis.horizontal,
+                                lineLength: width/2,
+                                lineThickness: 1.0,
+                                dashLength: 4.0,
+                                dashColor: Color.fromRGBO(196,196,196,10),
+                                dashRadius: 0.0,
+                                dashGapLength: 4.0,
+                                dashGapColor: Colors.transparent,
+                                dashGapRadius: 0.0,
+                              ),
+                              SizedBox(height: 6.5,),
+                              Row(children: [
+                                Column(children:[Padding(padding: EdgeInsets.only(left: 50),
+                                    child:Text('Waist Band Lenght')),
+                                  Padding(padding: EdgeInsets.only(top: 3,left: 65),
+                                      child:Text('23.25'))]),
+                                SizedBox(width: 44,),
+                                DottedLine(
+                                  direction: Axis.vertical,
+                                  lineLength: 52.5,
+                                  lineThickness: 1.0,
+                                  dashLength: 4.0,
+                                  dashColor: Color.fromRGBO(196,196,196,10),
+                                  dashRadius: 0.0,
+                                  dashGapLength: 4.0,
+                                  dashGapColor: Colors.transparent,
+                                  dashGapRadius: 0.0,
+                                ),
+                                SizedBox(width: 48,),
+                                Column(children:[Padding(padding: EdgeInsets.only(right: 65),
+                                    child:Text('Sleeves Length')),
+                                  Padding(padding: EdgeInsets.only(top: 3,right: 72),
+                                      child:Text('13.50'))]),
+                              ],
+                              ),
+                              SizedBox(height: 5.5,),
+                              DottedLine(
+                                direction: Axis.horizontal,
+                                lineLength: width/2,
+                                lineThickness: 1.0,
+                                dashLength: 4.0,
+                                dashColor: Color.fromRGBO(196,196,196,10),
+                                dashRadius: 0.0,
+                                dashGapLength: 4.0,
+                                dashGapColor: Colors.transparent,
+                                dashGapRadius: 0.0,
+                              ),
+                              SizedBox(height: 6.5,),
+                              Row(children: [
+                                Column(children:[Padding(padding: EdgeInsets.only(left: 50),
+                                    child:Text('Sleeve Round')),
+                                  Padding(padding: EdgeInsets.only(top: 3,left: 65),
+                                      child:Text('23.25'))]),
+                                SizedBox(width: 44,),
+                                DottedLine(
+                                  direction: Axis.vertical,
+                                  lineLength: 52.5,
+                                  lineThickness: 1.0,
+                                  dashLength: 4.0,
+                                  dashColor: Color.fromRGBO(196,196,196,10),
+                                  dashRadius: 0.0,
+                                  dashGapLength: 4.0,
+                                  dashGapColor: Colors.transparent,
+                                  dashGapRadius: 0.0,
+                                ),
+                                SizedBox(width: 48,),
+                                Column(children:[Padding(padding: EdgeInsets.only(right: 65),
+                                    child:Text('Arm Hole Round')),
+                                  Padding(padding: EdgeInsets.only(top: 3,right: 72),
+                                      child:Text('13.50'))]),
+                              ],
+                              ),
+                              SizedBox(height: 5.5,),
+                              DottedLine(
+                                direction: Axis.horizontal,
+                                lineLength: width/2,
+                                lineThickness: 1.0,
+                                dashLength: 4.0,
+                                dashColor: Color.fromRGBO(196,196,196,10),
+                                dashRadius: 0.0,
+                                dashGapLength: 4.0,
+                                dashGapColor: Colors.transparent,
+                                dashGapRadius: 0.0,
+                              ),
+                              SizedBox(height: 6.5,),
+                              Row(children: [
+                                Column(children:[Padding(padding: EdgeInsets.only(left: 50),
+                                    child:Text('Front Neck Deep')),
+                                  Padding(padding: EdgeInsets.only(top: 3,left: 65),
+                                      child:Text('23.25'))]),
+                                SizedBox(width: 44,),
+                                DottedLine(
+                                  direction: Axis.vertical,
+                                  lineLength: 52.5,
+                                  lineThickness: 1.0,
+                                  dashLength: 4.0,
+                                  dashColor: Color.fromRGBO(196,196,196,10),
+                                  dashRadius: 0.0,
+                                  dashGapLength: 4.0,
+                                  dashGapColor: Colors.transparent,
+                                  dashGapRadius: 0.0,
+                                ),
+                                SizedBox(width: 48,),
+                                Column(children:[Padding(padding: EdgeInsets.only(right: 65),
+                                    child:Text('Back Neck Deep')),
+                                  Padding(padding: EdgeInsets.only(top: 3,right: 72),
+                                      child:Text('13.50'))]),
+                              ],
+                              ),
+                              SizedBox(height: 5.5,),
+                              DottedLine(
+                                direction: Axis.horizontal,
+                                lineLength: width/2,
+                                lineThickness: 1.0,
+                                dashLength: 4.0,
+                                dashColor: Color.fromRGBO(196,196,196,10),
+                                dashRadius: 0.0,
+                                dashGapLength: 4.0,
+                                dashGapColor: Colors.transparent,
+                                dashGapRadius: 0.0,
+                              ),
+                              SizedBox(height: 6.5,),
+                              Row(children: [
+                                Column(children:[Padding(padding: EdgeInsets.only(left: 50),
+                                    child:Text('Neck Width')),
+                                  Padding(padding: EdgeInsets.only(top: 3,left: 65),
+                                      child:Text('23.25'))]),
+                                SizedBox(width: 44,),
+                                DottedLine(
+                                  direction: Axis.vertical,
+                                  lineLength: 52.5,
+                                  lineThickness: 1.0,
+                                  dashLength: 4.0,
+                                  dashColor: Color.fromRGBO(196,196,196,10),
+                                  dashRadius: 0.0,
+                                  dashGapLength: 4.0,
+                                  dashGapColor: Colors.transparent,
+                                  dashGapRadius: 0.0,
+                                ),
+                                SizedBox(width: 48,),
+                                Column(children:[Padding(padding: EdgeInsets.only(right: 65),
+                                    child:Text('Bust Width')),
+                                  Padding(padding: EdgeInsets.only(top: 3,right: 72),
+                                      child:Text('13.50'))]),
+                              ],
+                              ),
+                              SizedBox(height: 5.5,),
+                              DottedLine(
+                                direction: Axis.horizontal,
+                                lineLength: width/2,
+                                lineThickness: 1.0,
+                                dashLength: 4.0,
+                                dashColor: Color.fromRGBO(196,196,196,10),
+                                dashRadius: 0.0,
+                                dashGapLength: 4.0,
+                                dashGapColor: Colors.transparent,
+                                dashGapRadius: 0.0,
+                              ),
+
+
+
+
+
+                            ],)
 
                         ),
                       ),
+                      SizedBox(height: 14,),
+                      DottedLine(
+                        direction: Axis.horizontal,
+                        lineLength: width/2,
+                        lineThickness: 1.0,
+                        dashLength: 4.0,
+                        dashColor: Color.fromRGBO(196,196,196,10),
+                        dashRadius: 0.0,
+                        dashGapLength: 4.0,
+                        dashGapColor: Colors.transparent,
+                        dashGapRadius: 0.0,
+                      ),
+                      SizedBox(height: 19,),
+                      Row(children: [
+                        Column(children:[Padding(padding: EdgeInsets.only(left: 48),
+                            child:Text('PIPING')),
+                          Padding(padding: EdgeInsets.only(top: 6,left: 65),
+                              child:Text('NO'))]),
+                        SizedBox(width: 12,),
+                        DottedLine(
+                          direction: Axis.vertical,
+                          lineLength: 52,
+                          lineThickness: 1.0,
+                          dashLength: 4.0,
+                          dashColor: Color.fromRGBO(196,196,196,10),
+                          dashRadius: 0.0,
+                          dashGapLength: 4.0,
+                          dashGapColor: Colors.transparent,
+                          dashGapRadius: 0.0,
+                        ),
+                        SizedBox(width: 46,),
+                        Column(children:[Padding(padding: EdgeInsets.only(right: 47),
+                            child:Text('ZIP')),
+                          Padding(padding: EdgeInsets.only(top: 6,right: 37),
+                              child:Text('Front'))]),
+                        SizedBox(width: 47,),
+                        DottedLine(
+                          direction: Axis.vertical,
+                          lineLength: 52,
+                          lineThickness: 1.0,
+                          dashLength: 4.0,
+                          dashColor: Color.fromRGBO(196,196,196,10),
+                          dashRadius: 0.0,
+                          dashGapLength: 4.0,
+                          dashGapColor: Colors.transparent,
+                          dashGapRadius: 0.0,
+                        ),
+                        SizedBox(width: 31,),
+                        Column(children:[Padding(padding: EdgeInsets.only(right: 63),
+                            child:Text('HOOKS')),
+                          Padding(padding: EdgeInsets.only(top: 6,right: 84),
+                              child:Text('No'))]),
+                      ],
+                      ),
+                      SizedBox(height: 19,),
+                      DottedLine(
+                        direction: Axis.horizontal,
+                        lineLength: width/2,
+                        lineThickness: 1.0,
+                        dashLength: 4.0,
+                        dashColor: Color.fromRGBO(196,196,196,10),
+                        dashRadius: 0.0,
+                        dashGapLength: 4.0,
+                        dashGapColor: Colors.transparent,
+                        dashGapRadius: 0.0,
+                      ),
 
-                      SizedBox(height: 10),
+                      SizedBox(height: 8),
                       Row(
                         children: [
                           picWithHead('HANGINGS',

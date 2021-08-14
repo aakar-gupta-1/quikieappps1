@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:page_transition/page_transition.dart';
+import 'package:quikieappps1/blouse/review.dart';
 import 'package:quikieappps1/home/bottomNavigation.dart';
 import 'package:quikieappps1/home/homepage.dart';
 
@@ -202,10 +203,11 @@ class welcomeScreen2State extends State<welcomeScreen2> {
                                     ),
                                   ),
                                 ),
+
                                 Container(
                                   margin: EdgeInsets.only(top: 20),
                                   child: Text('Forget Password',style: TextStyle(color: Color(0xff1170DE)),))
-                              ],
+                                ],
                             );
                           })),
                 ),
