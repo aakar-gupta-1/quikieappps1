@@ -276,6 +276,16 @@ class reviewState extends State<review> {
                       ),
                       Text("Customer Measurement",style: TextStyle(color: Color.fromRGBO(151,151,151,10),fontSize: 15,
                         fontWeight: FontWeight.w400)),
+                      SizedBox(height: 7),
+                      Container(
+                        height: 327,
+                        width:  MediaQuery.of(context).size.width-10,
+                        color: Colors.white,
+                        child: Card(
+
+                        ),
+                      ),
+
                       SizedBox(height: 10),
                       Row(
                         children: [
