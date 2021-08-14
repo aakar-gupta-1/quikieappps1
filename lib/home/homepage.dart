@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:quikieappps1/blouse/review.dart';
 import 'package:quikieappps1/customer/addcustomer.dart';
 import 'package:quikieappps1/customer/selectcustomer.dart';
 import 'package:quikieappps1/blouse/design/design.dart';
@@ -256,7 +257,7 @@ class _HomePageScreenState extends State<HomePageScreen> {
           if (val == 3) {
             Navigator.push(
               context,
-              MaterialPageRoute(builder: (context) => selectcustomer()),
+              MaterialPageRoute(builder: (context) => review()),
             );
             // Navigator.push(context, PageTransition(type: PageTransitionType.downToUp, child: MyHomePage()));
           }
