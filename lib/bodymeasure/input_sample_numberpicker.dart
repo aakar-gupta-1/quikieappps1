@@ -57,7 +57,7 @@ class inputsamplePickerWrapper extends StatefulWidget {
     @required this.onSelectedChanged,
     this.titleTransformer,
     this.scaleTransformer,
-    this.titleTextColor = const Color.fromRGBO(241, 40, 116,10),
+    this.titleTextColor = Colors.black,
     this.scaleColor = const Color.fromRGBO(24, 16, 89,10),
     this.indicatorColor = const Color.fromRGBO(241, 40, 116,10),
     this.scaleTextColor = const Color.fromRGBO(229,229,229,10),
@@ -100,31 +100,32 @@ class HorizontalNumberPickerWrapperState
       crossAxisAlignment: CrossAxisAlignment.center,
       children: <Widget>[
         //上方选中值
+        Text(
+              widget.titleTransformer(_selectedValue),
+              style: TextStyle(
+                color: Colors.black,
+                fontSize: 40,
+                fontWeight: FontWeight.bold
+                //fontFamily: "Montserrat",
+              ),
+            ),
         Row(
           mainAxisSize: MainAxisSize.min,
           crossAxisAlignment: CrossAxisAlignment.baseline,
           textBaseline: TextBaseline.alphabetic,
           children: <Widget>[
-
-            Text(
-              widget.titleTransformer(_selectedValue),
-              style: TextStyle(
-                color: widget.titleTextColor,
-                fontSize: 40,
-                //fontFamily: "Montserrat",
-              ),
-            ),
             Text(
               ' ${widget.unit}',
               style: TextStyle(
                 color: widget.titleTextColor,
-                fontSize: 14,
+                fontSize: 19,
+                fontWeight: FontWeight.w500
                 //fontFamily: "Montserrat",
               ),
             ),
           ],
         ),
-        Container(width: 0, height: 10),
+        Container(width: 0, height: 30),
         //可滚动标尺
         Stack(
           children: <Widget>[

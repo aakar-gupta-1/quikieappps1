@@ -1,5 +1,6 @@
 import 'package:dotted_border/dotted_border.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class Todaycustomers extends StatelessWidget {
@@ -9,28 +10,29 @@ class Todaycustomers extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(height: 100,
-      width: MediaQuery.of(context).size.width,
-    child:
-    ListView(
+    return Container(
+      height: 100,
+      width: double.infinity,
+      child: ListView(
+        padding: EdgeInsets.symmetric(horizontal: 10,vertical: 10),
         scrollDirection: Axis.horizontal,
-
         children: <Widget>[
           Column(
             children: <Widget>[
-
-              Container(
-                width: width,
-                height: height,
-                decoration: BoxDecoration(
-                    shape: BoxShape.circle, color: Color.fromRGBO(233, 134, 187, 1)
-                ),
-                child: RawMaterialButton(
-                  onPressed: () {},
-                  shape: CircleBorder(),
-                  child: Icon(
-                    Icons.add,
-                    color: Colors.white,
+              DottedBorder(
+                borderType: BorderType.RRect,
+                radius: Radius.circular(30),
+                padding: EdgeInsets.all(6),
+                child: ClipRRect(
+                  borderRadius: BorderRadius.all(Radius.circular(30)),
+                  child: Container(
+                    height: 50,
+                    width: 50,
+                    color: Color(0xffE986BB),
+                    child: Icon(
+                      Icons.add,
+                      color: Colors.white,
+                    ),
                   ),
                 ),
               ),
@@ -42,23 +44,23 @@ class Todaycustomers extends StatelessWidget {
                     fontSize: customFontSize),
               )
             ],
-    ),
+          ),
           Column(
             children: <Widget>[
               Container(
                 width: width,
                 height: height,
                 decoration: BoxDecoration(
-                    shape: BoxShape.circle, color: Color.fromRGBO(255, 193, 168, 10),
-    ),
-                child: RawMaterialButton(
-                  onPressed: () {},
-                  shape: CircleBorder(),
-                  child: Icon(
-                    Icons.person,
-                    color: Color(0xFFAB436B),
-                  ),
+                  shape: BoxShape.circle,
+                  color: Color.fromRGBO(255, 193, 168, 10),
                 ),
+                child: RawMaterialButton(
+                    onPressed: () {},
+                    shape: CircleBorder(),
+                    child: Image.asset(
+                      'assets/images/Memoji (1).png',
+                      height: 50,
+                    )),
               ),
               Text(
                 "Aruna",
@@ -75,15 +77,15 @@ class Todaycustomers extends StatelessWidget {
                 width: width,
                 height: height,
                 decoration: BoxDecoration(
-                    shape: BoxShape.circle, color: Color.fromRGBO(188, 222, 255, 10)),
+                    shape: BoxShape.circle,
+                    color: Color.fromRGBO(188, 222, 255, 10)),
                 child: RawMaterialButton(
-                  onPressed: () {},
-                  shape: CircleBorder(),
-                  child: Icon(
-                    Icons.person,
-                    color: Color(0xFFAB436B),
-                  ),
-                ),
+                    onPressed: () {},
+                    shape: CircleBorder(),
+                    child: Image.asset(
+                      'assets/images/Memoji.png',
+                      height: 50,
+                    )),
               ),
               Text(
                 "Nalini",
@@ -100,7 +102,8 @@ class Todaycustomers extends StatelessWidget {
                 width: width,
                 height: height,
                 decoration: BoxDecoration(
-                    shape: BoxShape.circle, color: Color.fromRGBO(244, 236, 156, 10)),
+                    shape: BoxShape.circle,
+                    color: Color.fromRGBO(244, 236, 156, 10)),
                 child: RawMaterialButton(
                   onPressed: () {},
                   shape: CircleBorder(),
@@ -150,7 +153,8 @@ class Todaycustomers extends StatelessWidget {
                 width: width,
                 height: height,
                 decoration: BoxDecoration(
-                    shape: BoxShape.circle, color:  Color.fromRGBO(244, 236, 156, 10)),
+                    shape: BoxShape.circle,
+                    color: Color.fromRGBO(244, 236, 156, 10)),
                 child: RawMaterialButton(
                   onPressed: () {},
                   shape: CircleBorder(),

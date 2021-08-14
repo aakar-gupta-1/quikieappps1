@@ -48,51 +48,52 @@ class input_sampleState extends State<input_sample> {
             ),
           ),
         ),
-        body: Column(
-          children: [
-            Container(
-              child: Center(
-                child: Container(
-                  height: 178.8,
-                  width: 77.0,
-                  margin: EdgeInsets.fromLTRB(150, 15, 148, 0),
-                  child: Image.asset(
-                    'assets/images/Lady Taking Measurement.png',
+        body: Container(
+          child: Column(
+            children: [
+              Container(
+                child: Center(
+                  child: Container(
+                    height: 178.8,
+                    width: 77.0,
+                    margin: EdgeInsets.fromLTRB(150, 15, 148, 0),
+                    child: Image.asset(
+                      'assets/images/Lady Taking Measurement.png',
+                    ),
                   ),
                 ),
+                //do something,
               ),
-              //do something,
-            ),
-            Padding(
-              padding: EdgeInsets.symmetric(vertical: 30,horizontal: 40),
-              child: Center(
-                child: Text('We will Predicts The Body Measurement Later You Can Change Please Fill Your',style: TextStyle(fontSize: 24,fontWeight: FontWeight.w300,height: 1.5),textAlign: TextAlign.center,)),
-            ),
-            Container(
-                child: Text(
-              "Shoulder",
-              style: TextStyle(fontSize: 24, color: Colors.black87),
-            )),
-            Padding(
-              padding: const EdgeInsets.all(50),
-              child: Container(
+              Container(
+                padding: EdgeInsets.all(20),
+                child: Center(
+                  child: Text('We will Predicts The Body Measurement Later You Can Change Please Fill Your',style: TextStyle(fontSize: 24,fontWeight: FontWeight.w300,height: 1.5),textAlign: TextAlign.center,)),
+              ),
+              Container(
+                margin: EdgeInsets.only(top: 20),
+                  child: Text(
+                "Shoulder",
+                style: TextStyle(fontSize: 24, color: Colors.black87),
+              )),
+              Container(
                 child: inputsamplePickerWrapper(
+                  titleTextColor: Color(0xffF12874),
                   initialValue: 95,
                   minValue: 10,
                   maxValue: 200,
                   step: 1,
                   unit: 'INCH',
                   title: '',
-                  widgetWidth: MediaQuery.of(context).size.width.round() - 30,
+                  widgetWidth: MediaQuery.of(context).size.width.round(),
                   subGridCountPerGrid: 10,
                   subGridWidth: 8,
                   onSelectedChanged: (value) {
                     print(value);
                   },
                 ),
-              ),
-            )
-          ],
+              )
+            ],
+          ),
         ),
         floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
         floatingActionButton: Padding(

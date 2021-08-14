@@ -226,15 +226,7 @@ class CustomHorizontalPicker extends StatelessWidget {
     return Container(
       width: width / 1.8,
       decoration: BoxDecoration(
-          gradient: LinearGradient(
-              end: Alignment.bottomCenter,
-              begin: Alignment.topCenter,
-              colors: [
-                Color.fromRGBO(3, 43, 119, 1),
-                Color.fromRGBO(3, 43, 119, 1),
-                Colors.white,
-                Colors.white,
-              ]),
+             color:   Color.fromRGBO(3, 43, 119, 1),
           border: Border.all(
               color: Colors.black, // Set border color
               width: 1.0), // Set border width

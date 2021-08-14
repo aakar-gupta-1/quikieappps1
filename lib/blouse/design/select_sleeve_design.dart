@@ -254,7 +254,7 @@ class select_sleeve_designState extends State<select_sleeve_design> {
           if (val == 1) {
             Navigator.push(
               context,
-              MaterialPageRoute(builder: (context) => PreviewOrder()),
+              MaterialPageRoute(builder: (context) => PreviewOrders()),
             );
             // Navigator.push(context, PageTransition(type: PageTransitionType.downToUp, child: MyHomePage()));
           }

@@ -133,26 +133,36 @@ class HorizontalNumberPickerWrapperState
         //可滚动标尺
         Stack(
           children: <Widget>[
-            HorizontalNumberPicker(
-              initialValue: widget.initialValue,
-              minValue: widget.minValue,
-              maxValue: widget.maxValue,
-              title: widget.title,
-              step: widget.step,
-              widgetWidth: widget.widgetWidth,
-              widgetHeight: numberPickerHeight,
-              subGridCountPerGrid: widget.subGridCountPerGrid,
-              subGridWidth: widget.subGridWidth,
-              onSelectedChanged: (value) {
-                widget.onSelectedChanged(value);
-                setState(() {
-                  _selectedValue = value;
-                });
-              },
-              scaleTransformer: widget.scaleTransformer,
-              scaleColor: widget.scaleColor,
-              indicatorColor: widget.indicatorColor,
-              scaleTextColor: widget.scaleTextColor,
+            Container(
+              height: 50,
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.only(
+                  bottomLeft: Radius.circular(20),
+                  bottomRight: Radius.circular(20)
+                ),
+              color: Colors.white,
+              ),
+              child: HorizontalNumberPicker(
+                initialValue: widget.initialValue,
+                minValue: widget.minValue,
+                maxValue: widget.maxValue,
+                title: widget.title,
+                step: widget.step,
+                widgetWidth: widget.widgetWidth,
+                widgetHeight: numberPickerHeight,
+                subGridCountPerGrid: widget.subGridCountPerGrid,
+                subGridWidth: widget.subGridWidth,
+                onSelectedChanged: (value) {
+                  widget.onSelectedChanged(value);
+                  setState(() {
+                    _selectedValue = value;
+                  });
+                },
+                scaleTransformer: widget.scaleTransformer,
+                scaleColor: widget.scaleColor,
+                indicatorColor: widget.indicatorColor,
+                scaleTextColor: widget.scaleTextColor,
+              ),
             ),
 
             // Positioned(

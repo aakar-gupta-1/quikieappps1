@@ -79,52 +79,52 @@ class selectcustomerState extends State<selectcustomer> {
             ),
           ]),
         ),
-        bottomNavigationBar: FloatingNavbar(
-          borderRadius: 12,
-          backgroundColor: Colors.white,
-          selectedItemColor: Color.fromRGBO(69, 89, 210, 10),
-          unselectedItemColor: Colors.black54,
-          onTap: (int val) {
-            setState(() {
-              _index = val;
-            });
-            if (val == 0) {
-              Navigator.pushAndRemoveUntil(
-                  context,
-                  PageTransition(
-                      duration: Duration(milliseconds: 300),
-                      type: PageTransitionType.leftToRight,
-                      child: HomePageScreen()),
-                  ModalRoute.withName(""));
+        // bottomNavigationBar: FloatingNavbar(
+        //   borderRadius: 12,
+        //   backgroundColor: Colors.white,
+        //   selectedItemColor: Color.fromRGBO(69, 89, 210, 10),
+        //   unselectedItemColor: Colors.black54,
+        //   onTap: (int val) {
+        //     setState(() {
+        //       _index = val;
+        //     });
+        //     if (val == 0) {
+        //       Navigator.pushAndRemoveUntil(
+        //           context,
+        //           PageTransition(
+        //               duration: Duration(milliseconds: 300),
+        //               type: PageTransitionType.leftToRight,
+        //               child: HomePageScreen()),
+        //           ModalRoute.withName(""));
 
-              // Navigator.push(context, PageTransition(type: PageTransitionType.downToUp, child: DailyLiaScreen()));
-            }
+        //       // Navigator.push(context, PageTransition(type: PageTransitionType.downToUp, child: DailyLiaScreen()));
+        //     }
 
-            if (val == 1) {
-              // Navigator.push(context, PageTransition(type: PageTransitionType.downToUp, child: DailyLiaScreen()));
-            }
-            if (val == 2) {
-              // Navigator.push(context, PageTransition(type: PageTransitionType.downToUp, child: MyHomePage()));
-            }
+        //     if (val == 1) {
+        //       // Navigator.push(context, PageTransition(type: PageTransitionType.downToUp, child: DailyLiaScreen()));
+        //     }
+        //     if (val == 2) {
+        //       // Navigator.push(context, PageTransition(type: PageTransitionType.downToUp, child: MyHomePage()));
+        //     }
 
-            if (val == 3) {
-              // Navigator.push(context, PageTransition(type: PageTransitionType.downToUp, child: MyHomePage()));
-            }
-          },
-          currentIndex: 3,
-          items: [
-            FloatingNavbarItem(
-              icon: Icons.store,
-              title: 'Store',
-            ),
-            //FloatingNavbarItem(icon: Icons.help_outline_rounded, title: 'Help Desk'),
-            FloatingNavbarItem(
-                icon: Icons.monetization_on_outlined, title: 'Orders'),
-            FloatingNavbarItem(
-                icon: Icons.design_services_outlined, title: 'Designs'),
-            FloatingNavbarItem(icon: Icons.people_rounded, title: 'Customers'),
-          ],
-        ),
+        //     if (val == 3) {
+        //       // Navigator.push(context, PageTransition(type: PageTransitionType.downToUp, child: MyHomePage()));
+        //     }
+        //   },
+        //   currentIndex: 3,
+        //   items: [
+        //     FloatingNavbarItem(
+        //       icon: Icons.store,
+        //       title: 'Store',
+        //     ),
+        //     //FloatingNavbarItem(icon: Icons.help_outline_rounded, title: 'Help Desk'),
+        //     FloatingNavbarItem(
+        //         icon: Icons.monetization_on_outlined, title: 'Orders'),
+        //     FloatingNavbarItem(
+        //         icon: Icons.design_services_outlined, title: 'Designs'),
+        //     FloatingNavbarItem(icon: Icons.people_rounded, title: 'Customers'),
+        //   ],
+        // ),
         floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
         floatingActionButton: new FloatingActionButton(
           onPressed: () {

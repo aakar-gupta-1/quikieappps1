@@ -1,11 +1,45 @@
+import 'package:bottom_sheet/bottom_sheet.dart';
 import 'package:flutter/material.dart';
 import 'package:page_transition/page_transition.dart';
 import 'package:quikieappps1/assets/colors.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:quikieappps1/bill/generatedbill.dart';
+import 'package:quikieappps1/home/popularmenu.dart';
 import 'package:quikieappps1/screens/previewOrder.dart';
 
-class PlaceOrder extends StatelessWidget {
+class PlaceOrder extends StatefulWidget {
+
+  @override
+  _PlaceOrderState createState() => _PlaceOrderState();
+}
+
+class _PlaceOrderState extends State<PlaceOrder> {
+
+
+    showModel() {
+    showModalBottomSheet(
+        context: context,
+        builder: (context) {
+            return SafeArea(
+              child: Container(
+                height: double.infinity  ,
+                child: SingleChildScrollView(
+                  child: Column(
+                    children: [
+                      Container(
+                        margin: EdgeInsets.symmetric(vertical: 20),
+                        height: 400,
+                        width: MediaQuery.of(context).size.width,
+                        child: Tabview(),
+                      ),
+                    ],
+                  ),
+                ),
+              ),
+            );
+          });
+        }
+
   Widget appBar() {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.center,
@@ -368,8 +402,13 @@ class PlaceOrder extends StatelessWidget {
                                           SvgPicture.asset(
                                             "assets/images/Delete.svg",
                                           ),
-                                          SvgPicture.asset(
-                                            "assets/images/Edit Order.svg",
+                                          InkWell(
+                                            onTap: (){
+                                              Navigator.push(context, MaterialPageRoute(builder: (context)=>PreviewOrders()));
+                                            },
+                                            child: SvgPicture.asset(
+                                              "assets/images/Edit Order.svg",
+                                            ),
                                           ),
                                           SvgPicture.asset(
                                             "assets/images/Duplicate.svg",
@@ -456,30 +495,35 @@ class PlaceOrder extends StatelessWidget {
                     ),
                     Positioned(
                       bottom: 90,
-                      child: Container(
-                        padding: EdgeInsets.only(
-                            top: 7, bottom: 7, left: 14, right: 25),
-                        height: 37,
-                        width: 160,
-                        decoration: BoxDecoration(
-                            color: secondaryColor,
-                            borderRadius: BorderRadius.circular(26)),
-                        child: Row(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: [
-                            SvgPicture.asset(
-                              "assets/images/Add circle.svg",
-                              color: Colors.white,
-                            ),
-                            SizedBox(width: 8),
-                            Text(
-                              "Add Items",
-                              style: TextStyle(
-                                  color: Colors.white,
-                                  fontSize: 15,
-                                  fontWeight: FontWeight.w600),
-                            ),
-                          ],
+                      child: InkWell(
+                        onTap: (){
+                          showModel();
+                        },
+                        child: Container(
+                          padding: EdgeInsets.only(
+                              top: 7, bottom: 7, left: 14, right: 25),
+                          height: 37,
+                          width: 160,
+                          decoration: BoxDecoration(
+                              color: secondaryColor,
+                              borderRadius: BorderRadius.circular(26)),
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              SvgPicture.asset(
+                                "assets/images/Add circle.svg",
+                                color: Colors.white,
+                              ),
+                              SizedBox(width: 8),
+                              Text(
+                                "Add Items",
+                                style: TextStyle(
+                                    color: Colors.white,
+                                    fontSize: 15,
+                                    fontWeight: FontWeight.w600),
+                              ),
+                            ],
+                          ),
                         ),
                       ),
                     ),
@@ -530,7 +574,7 @@ class PlaceOrder extends StatelessWidget {
                       Duration(milliseconds: 300),
                       type:
                       PageTransitionType.leftToRight,
-                      child: PreviewOrder()),
+                      child: PreviewOrders()),
                   ModalRoute.withName(""));
             },
             child: Container(
@@ -544,3 +588,21 @@ class PlaceOrder extends StatelessWidget {
         ]));
   }
 }
+
+Widget _buildBottomSheet(
+      BuildContext context,
+      ScrollController scrollController,
+      double bottomSheetOffset,
+      Function bottomState,
+    ) {
+      return SingleChildScrollView(
+        child: SafeArea(
+          child: Material(
+            child: Stack(children: [
+               Column(
+               )
+            ]),
+          ),
+        ),
+      );
+    }

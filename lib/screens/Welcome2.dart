@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:page_transition/page_transition.dart';
+import 'package:quikieappps1/home/bottomNavigation.dart';
 import 'package:quikieappps1/home/homepage.dart';
 
 class welcomeScreen2 extends StatefulWidget {
@@ -174,7 +175,7 @@ class welcomeScreen2State extends State<welcomeScreen2> {
                                                 Duration(milliseconds: 300),
                                             type:
                                                 PageTransitionType.leftToRight,
-                                            child: HomePageScreen()),
+                                            child: BottomNavigation()),
                                         ModalRoute.withName(""));
                                   },
                                   textColor: Colors.white,

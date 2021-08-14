@@ -117,7 +117,7 @@ class _OrdersState extends State<Orders> {
   }
 
   Widget categories() {
-    return Column(children: [categoryCard1(), categoryCard1()]);
+    return SingleChildScrollView(child: Column(children: [categoryCard1(), categoryCard1()]));
   }
 
   Widget categoryCard1() {

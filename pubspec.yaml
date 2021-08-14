@@ -36,6 +36,8 @@ dependencies:
   flutter_switch: ^0.3.2
   toggle_switch: ^1.2.0
   page_transition: ^1.1.5
+  bottom_sheet: ^1.0.0
+  dotted_line: ^3.0.0
 
 dev_dependencies:
   flutter_test:
