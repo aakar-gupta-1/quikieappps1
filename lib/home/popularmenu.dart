@@ -8,575 +8,232 @@ import 'package:quikieappps1/saree/saree_design.dart';
 class Tabview extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    var gridView1 =GridView.count(
+    var gridView1 = GridView.count(
       primary: false,
       padding: const EdgeInsets.all(10),
-      crossAxisSpacing: 10,
+      crossAxisSpacing: 1,
       mainAxisSpacing: 20,
-      crossAxisCount: 4,
+      crossAxisCount: 3,
       children: <Widget>[
-        GestureDetector(
-        // When the child is tapped, show a snackbar.
-        onTap: () {Navigator.push(
-          context,
-          MaterialPageRoute(builder: (context) => input_sample()));},
-        child:
-        Container(
-          decoration: BoxDecoration(
-              color: Colors.transparent,
-              borderRadius: BorderRadius.all(Radius.circular(12))),
-          child: Column(
-            children: [
-
-              Expanded(
-                flex: 9,
-                child: ClipRRect(
-                  borderRadius: BorderRadius.all(Radius.circular(12)),
-                  child: Image.asset('assets/images/Rectangle 540.png',
-                      fit: BoxFit.fill),
-                ),
-              ),
-              Expanded(flex: 5, child: Text("Hand Embroidery",textAlign: TextAlign.center,)),
-            ],
-          ),
-        ),),
-    GestureDetector(
-    // When the child is tapped, show a snackbar.
-    onTap: () {Navigator.push(
-    context,
-    MaterialPageRoute(builder: (context) => input_sample()));},
-    child:
-        Container(
-          decoration: BoxDecoration(
-              color: Colors.transparent,
-              borderRadius: BorderRadius.all(Radius.circular(12))),
-          child: Column(
-            children: [
-              Expanded(
-                flex: 9,
-
-                child:
-                ClipRRect(
-                    borderRadius: BorderRadius.all(Radius.circular(12)),
-                    child: Image.asset('assets/images/Rectangle 542.png',
-                        fit: BoxFit.fill)),
-              ),
-              Expanded(flex: 5, child: Text("Machine Embroidery",textAlign: TextAlign.center,)),
-            ],
-          ),
-        ),),GestureDetector(
-    // When the child is tapped, show a snackbar.
-    onTap: () {Navigator.push(
-    context,
-    MaterialPageRoute(builder: (context) => input_sample()));},
-    child:
-        Container(
-          decoration: BoxDecoration(
-              color: Colors.transparent,
-              borderRadius: BorderRadius.all(Radius.circular(12))),
-          child: Column(
-            children: [
-              Expanded(
-                flex: 9,
-                child: ClipRRect(
-                    borderRadius: BorderRadius.all(Radius.circular(12)),
-                    child: Image.asset('assets/images/Rectangle 544.png',
-                        fit: BoxFit.fill)),
-              ),
-              Expanded(flex: 5, child: Text("Princes Cut Blouse",textAlign: TextAlign.center,)),
-            ],
-          ),
-        ),),
-    GestureDetector(
-    // When the child is tapped, show a snackbar.
-    onTap: () {Navigator.push(
-    context,
-    MaterialPageRoute(builder: (context) => input_sample()));},
-    child:
-        Container(
-          decoration: BoxDecoration(
-              color: Colors.transparent,
-              borderRadius: BorderRadius.all(Radius.circular(12))),
-          child: Column(
-            children: [
-              Expanded(
-                flex: 9,
-                child: ClipRRect(
-                    borderRadius: BorderRadius.all(Radius.circular(12)),
-                    child: Image.asset('assets/images/Rectangle 546.png',
-                        fit: BoxFit.fill)),
-              ),
-              Expanded(flex: 5, child: Text("Katori Blouse",textAlign: TextAlign.center,)),
-            ],
-          ),
-        ),),GestureDetector(
-    // When the child is tapped, show a snackbar.
-    onTap: () {Navigator.push(
-    context,
-    MaterialPageRoute(builder: (context) => input_sample()));},
-    child:
-        Container(
-          decoration: BoxDecoration(
-              color: Colors.transparent,
-              borderRadius: BorderRadius.all(Radius.circular(12))),
-          child: Column(
-            children: [
-              Expanded(
-                flex: 9,
-                child: ClipRRect(
-                    borderRadius: BorderRadius.all(Radius.circular(12)),
-                    child: Image.asset('assets/images/Rectangle 548.png',
-                        fit: BoxFit.fill)),
-              ),
-              Expanded(flex: 5, child: Text("Lining Blouse",textAlign: TextAlign.center,)),
-            ],
-          ),
-        ),),
-    GestureDetector(
-    // When the child is tapped, show a snackbar.
-    onTap: () {Navigator.push(
-    context,
-    MaterialPageRoute(builder: (context) => input_sample()));},
-    child:
-        Container(
-          decoration: BoxDecoration(
-              color: Colors.transparent,
-              borderRadius: BorderRadius.all(Radius.circular(12))),
-          child: Column(
-            children: [
-              Expanded(
-                flex: 9,
-                child: ClipRRect(
-                    borderRadius: BorderRadius.all(Radius.circular(12)),
-                    child: Image.asset('assets/images/Rectangle 550.png',
-                        fit: BoxFit.fill)),
-              ),
-              Expanded(flex: 5, child: Text("Lehenga Blouse",textAlign: TextAlign.center,)),
-            ],
-          ),
-        ),),GestureDetector(
-    // When the child is tapped, show a snackbar.
-    onTap: () {Navigator.push(
-    context,
-    MaterialPageRoute(builder: (context) => input_sample()));},
-    child:
-        Container(
-          decoration: BoxDecoration(
-              color: Colors.transparent,
-              borderRadius: BorderRadius.all(Radius.circular(12))),
-          child: Column(
-            children: [
-              Expanded(
-                flex: 9,
-                child: ClipRRect(
-                    borderRadius: BorderRadius.all(Radius.circular(12)),
-                    child: Image.asset("assets/images/Rectangle 552.png",
-                        fit: BoxFit.fill)),
-              ),
-              Expanded(flex: 5, child: Text("Blouse",textAlign: TextAlign.center,)),
-            ],
-          ),
-        ),),
+        TabBarWidget(
+          asset: 'assets/images/Rectangle 540.png',
+          text: 'Hand Embroidery',
+        ),
+        TabBarWidget(
+          asset: 'assets/images/Rectangle 542.png',
+          text: 'Machine Embroidery',
+        ),
+        TabBarWidget(
+          asset: 'assets/images/Rectangle 544.png',
+          text: 'Princes Cut Blouse',
+        ),
+        TabBarWidget(
+          asset: 'assets/images/Rectangle 546.png',
+          text: 'Katori Blouse',
+        ),
+        TabBarWidget(
+          asset: 'assets/images/Rectangle 548.png',
+          text: 'Lining Blouse',
+        ),
+        TabBarWidget(
+          asset: 'assets/images/Rectangle 550.png',
+          text: 'Lehnga Blouse',
+        ),
+        TabBarWidget(
+          asset: 'assets/images/Rectangle 552.png',
+          text: 'Blouse',
+        ),
       ],
     );
-    var gridView2 =GridView.count(
+    var gridView2 = GridView.count(
       primary: false,
       padding: const EdgeInsets.all(10),
-      crossAxisSpacing: 10,
+      crossAxisSpacing: 2,
       mainAxisSpacing: 20,
-      crossAxisCount: 4,
+      crossAxisCount: 3,
       children: <Widget>[
-        GestureDetector(
-        // When the child is tapped, show a snackbar.
-        onTap: () {Navigator.push(
-        context,
-        MaterialPageRoute(builder: (context) => input_sample_dress()));},
-    child:
-        Container(decoration: BoxDecoration(
-            color: Colors.transparent,
-
-            borderRadius: BorderRadius.all(Radius.circular(12))),
-          child: Column(
-            children: [
-              Expanded(
-                flex: 9,
-                child: ClipRRect(
-                    borderRadius: BorderRadius.all(Radius.circular(12)),
-                    child: Image.asset('assets/images/Rectangle 540.png',
-                        fit: BoxFit.fill)),
-              ),
-              Expanded(flex: 5, child: Text("Gown",textAlign: TextAlign.center,)),
-            ],
-          ),
-        ),),
-    GestureDetector(
-    // When the child is tapped, show a snackbar.
-    onTap: () {Navigator.push(
-    context,
-    MaterialPageRoute(builder: (context) => input_sample_dress()));},
-    child:
-        Container(
-          decoration: BoxDecoration(
-              color: Colors.transparent,
-              borderRadius: BorderRadius.all(Radius.circular(12))),
-          child: Column(
-            children: [
-              Expanded(
-                flex: 9,
-                child: ClipRRect(
-                    borderRadius: BorderRadius.all(Radius.circular(12)),
-                    child: Image.asset('assets/images/Rectangle 542.png',
-                        fit: BoxFit.fill)),
-              ),
-              Expanded(flex: 5, child: Text("Kurta",textAlign: TextAlign.center,)),
-            ],
-          ),
-        ),),
-    GestureDetector(
-    // When the child is tapped, show a snackbar.
-    onTap: () {Navigator.push(
-    context,
-    MaterialPageRoute(builder: (context) => input_sample_dress()));},
-    child:
-        Container(
-          decoration: BoxDecoration(
-              color: Colors.transparent,
-              borderRadius: BorderRadius.all(Radius.circular(12))),
-          child: Column(
-            children: [
-              Expanded(
-                flex: 9,
-                child: ClipRRect(
-                    borderRadius: BorderRadius.all(Radius.circular(12)),
-                    child: Image.asset('assets/images/Rectangle 544.png',
-                        fit: BoxFit.fill)),
-              ),
-              Expanded(flex: 5, child: Text("Salwar",textAlign: TextAlign.center,)),
-            ],
-          ),
-        ),),
-    GestureDetector(
-    // When the child is tapped, show a snackbar.
-    onTap: () {Navigator.push(
-    context,
-    MaterialPageRoute(builder: (context) => input_sample_dress()));},
-    child:
-        Container(
-          decoration: BoxDecoration(
-              color: Colors.transparent,
-              borderRadius: BorderRadius.all(Radius.circular(12))),
-          child: Column(
-            children: [
-              Expanded(
-                flex: 9,
-                child: ClipRRect(
-                    borderRadius: BorderRadius.all(Radius.circular(12)),
-                    child: Image.asset('assets/images/Rectangle 546.png',
-                        fit: BoxFit.fill)),
-              ),
-              Expanded(flex: 5, child: Text("Ghagra",textAlign: TextAlign.center,)),
-            ],
-          ),
-        ),),
-    GestureDetector(
-    // When the child is tapped, show a snackbar.
-    onTap: () {Navigator.push(
-    context,
-    MaterialPageRoute(builder: (context) => input_sample_dress()));},
-    child:
-        Container(
-          decoration: BoxDecoration(
-              color: Colors.transparent,
-              borderRadius: BorderRadius.all(Radius.circular(12))),
-          child: Column(
-            children: [
-              Expanded(
-                flex: 9,
-                child: ClipRRect(
-                    borderRadius: BorderRadius.all(Radius.circular(12)),
-                    child: Image.asset('assets/images/Rectangle 548.png',
-                        fit: BoxFit.fill)),
-              ),
-              Expanded(flex: 5, child: Text("Churidar",textAlign: TextAlign.center,)),
-            ],
-          ),
-        ),),GestureDetector(
-    // When the child is tapped, show a snackbar.
-    onTap: () {Navigator.push(
-    context,
-    MaterialPageRoute(builder: (context) => input_sample_dress()));},
-    child:
-        Container(
-          decoration: BoxDecoration(
-              color: Colors.transparent,
-              borderRadius: BorderRadius.all(Radius.circular(12))),
-          child: Column(
-            children: [
-              Expanded(
-                flex: 9,
-                child: ClipRRect(
-                    borderRadius: BorderRadius.all(Radius.circular(12)),
-                    child: Image.asset('assets/images/Rectangle 550.png',
-                        fit: BoxFit.fill)),
-              ),
-              Expanded(flex: 5, child: Text("Lehenga Blouse",textAlign: TextAlign.center,)),
-            ],
-          ),
-        ),),
-
+        TabBarWidget(
+          asset: 'assets/images/Rectangle 540.png',
+          text: 'Gown',
+        ),
+        TabBarWidget(
+          asset: 'assets/images/Rectangle 542.png',
+          text: 'Kurta',
+        ),
+        TabBarWidget(
+          asset: 'assets/images/Rectangle 544.png',
+          text: 'Salwar',
+        ),
+        TabBarWidget(
+          asset: 'assets/images/Rectangle 546.png',
+          text: 'Ghagra',
+        ),
+        TabBarWidget(
+          asset: 'assets/images/Rectangle 548.png',
+          text: 'Churidar',
+        ),
+        TabBarWidget(
+          asset: 'assets/images/Rectangle 550.png',
+          text: 'Lehenga Blouse',
+        )
       ],
     );
-    var gridView3 =GridView.count(
+    var gridView3 = GridView.count(
       primary: false,
       padding: const EdgeInsets.all(10),
-      crossAxisSpacing: 10,
+      crossAxisSpacing: 2,
       mainAxisSpacing: 20,
-      crossAxisCount: 4,
+      crossAxisCount: 3,
       children: <Widget>[
-        GestureDetector(
-        // When the child is tapped, show a snackbar.
-        onTap: () {Navigator.push(
-        context,
-        MaterialPageRoute(builder: (context) => HomePage()));},
-    child:
-        Container(decoration: BoxDecoration(
-            color: Colors.transparent,
-            borderRadius: BorderRadius.all(Radius.circular(12))),
-          child: Column(
-            children: [
-              Expanded(
-                flex: 9,
-                child: ClipRRect(
-                    borderRadius: BorderRadius.all(Radius.circular(12)),
-                    child: Image.asset('assets/images/Rectangle 540.png',
-                        fit: BoxFit.fill)),
-              ),
-              Expanded(flex: 5, child: Text("Chudi Bottom",textAlign: TextAlign.center,)),
-            ],
-          ),
-        ),),
-    GestureDetector(
-    // When the child is tapped, show a snackbar.
-    onTap: () {Navigator.push(
-    context,
-    MaterialPageRoute(builder: (context) => HomePage()));},
-    child:
-        Container(
-          decoration: BoxDecoration(
-              color: Colors.transparent,
-              borderRadius: BorderRadius.all(Radius.circular(12))),
-          child: Column(
-            children: [
-              Expanded(
-                flex: 9,
-                child: ClipRRect(
-                    borderRadius: BorderRadius.all(Radius.circular(12)),
-                    child: Image.asset('assets/images/Rectangle 542.png',
-                        fit: BoxFit.fill)),
-              ),
-              Expanded(flex: 5, child: Text("Salwar Bottom",textAlign: TextAlign.center,)),
-            ],
-          ),
-        ),),GestureDetector(
-    // When the child is tapped, show a snackbar.
-    onTap: () {Navigator.push(
-    context,
-    MaterialPageRoute(builder: (context) => HomePage()));},
-    child:
-        Container(
-          decoration: BoxDecoration(
-              color: Colors.transparent,
-              borderRadius: BorderRadius.all(Radius.circular(12))),
-          child: Column(
-            children: [
-              Expanded(
-                flex: 9,
-                child: ClipRRect(
-                    borderRadius: BorderRadius.all(Radius.circular(12)),
-                    child: Image.asset('assets/images/Rectangle 544.png',
-                        fit: BoxFit.fill)),
-              ),
-              Expanded(flex: 5, child: Text("Patiala",textAlign: TextAlign.center,)),
-            ],
-          ),
-        ),),
-    GestureDetector(
-    // When the child is tapped, show a snackbar.
-    onTap: () {Navigator.push(
-    context,
-    MaterialPageRoute(builder: (context) => HomePage()));},
-    child:
-        Container(
-          decoration: BoxDecoration(
-              color: Colors.transparent,
-              borderRadius: BorderRadius.all(Radius.circular(12))),
-          child: Column(
-            children: [
-              Expanded(
-                flex: 9,
-                child: ClipRRect(
-                    borderRadius: BorderRadius.all(Radius.circular(12)),
-                    child: Image.asset('assets/images/Rectangle 546.png',
-                        fit: BoxFit.fill)),
-              ),
-              Expanded(flex: 5, child: Text("Palzzo",textAlign: TextAlign.center,)),
-            ],
-          ),
-        ),),GestureDetector(
-    // When the child is tapped, show a snackbar.
-    onTap: () {Navigator.push(
-    context,
-    MaterialPageRoute(builder: (context) => HomePage()));},
-    child:
-        Container(
-          decoration: BoxDecoration(
-              color: Colors.transparent,
-              borderRadius: BorderRadius.all(Radius.circular(12))),
-          child: Column(
-            children: [
-              Expanded(
-                flex: 9,
-                child: ClipRRect(
-                    borderRadius: BorderRadius.all(Radius.circular(12)),
-                    child: Image.asset('assets/images/Rectangle 548.png',
-                        fit: BoxFit.fill)),
-              ),
-              Expanded(flex: 5, child: Text("Straight Pant",textAlign: TextAlign.center,)),
-            ],
-          ),
-        ),),GestureDetector(
-    // When the child is tapped, show a snackbar.
-    onTap: () {Navigator.push(
-    context,
-    MaterialPageRoute(builder: (context) => HomePage()));},
-    child:
-        Container(
-          decoration: BoxDecoration(
-              color: Colors.transparent,
-              borderRadius: BorderRadius.all(Radius.circular(12))),
-          child: Column(
-            children: [
-              Expanded(
-                flex: 9,
-                child: ClipRRect(
-                    borderRadius: BorderRadius.all(Radius.circular(12)),
-                    child: Image.asset('assets/images/Rectangle 550.png',
-                        fit: BoxFit.fill)),
-              ),
-              Expanded(flex: 5, child: Text("Lehenga Bottom",textAlign: TextAlign.center,)),
-            ],
-          ),
-        ),),
-
+        TabBarWidget(
+          asset: 'assets/images/Rectangle 540.png',
+          text: 'Chudi Bottom',
+        ),
+        TabBarWidget(
+          asset: 'assets/images/Rectangle 542.png',
+          text: 'Salwar Bottom',
+        ),
+        TabBarWidget(
+          asset: 'assets/images/Rectangle 544.png',
+          text: 'Patiala',
+        ),
+        TabBarWidget(
+          asset: 'assets/images/Rectangle 546.png',
+          text: 'Palzzo',
+        ),
+        TabBarWidget(
+          asset: 'assets/images/Rectangle 548.png',
+          text: 'Straight Pant',
+        ),
+        TabBarWidget(
+          asset: 'assets/images/Rectangle 550.png',
+          text: 'Lehenge Bottom',
+        ),
       ],
     );
-    var gridView4 =GridView.count(
+    var gridView4 = GridView.count(
         primary: false,
         padding: const EdgeInsets.all(10),
         crossAxisSpacing: 10,
         mainAxisSpacing: 20,
-        crossAxisCount: 4,
+        crossAxisCount: 3,
         children: <Widget>[
-        GestureDetector(
-        // When the child is tapped, show a snackbar.
-        onTap: () {Navigator.push(
-        context,
-        MaterialPageRoute(builder: (context) => saree_design()));},
-    child:
-          Container(decoration: BoxDecoration(
-              color: Colors.transparent,
-              borderRadius: BorderRadius.all(Radius.circular(12))),
-            child: Column(
-              children: [
-                Expanded(
-                  flex: 9,
-                  child: ClipRRect(
-                      borderRadius: BorderRadius.all(Radius.circular(12)),
-                      child: Image.asset('assets/images/Rectangle 540.png',
-                          fit: BoxFit.fill)),
-                ),
-                Expanded(flex: 5, child: Text("Saree Krosha",textAlign: TextAlign.center,)),
-              ],
-            ),
-          ),),
-    GestureDetector(
-    // When the child is tapped, show a snackbar.
-    onTap: () {Navigator.push(
-    context,
-    MaterialPageRoute(builder: (context) => saree_design()));},
-    child:
-          Container(
-            decoration: BoxDecoration(
-                color: Colors.transparent,
-                borderRadius: BorderRadius.all(Radius.circular(12))),
-            child: Column(
-              children: [
-                Expanded(
-                  flex: 9,
-                  child: ClipRRect(
-                      borderRadius: BorderRadius.all(Radius.circular(12)),
-                      child: Image.asset('assets/images/Rectangle 542.png',
-                          fit: BoxFit.fill)),
-                ),
-                Expanded(flex: 5, child: Text("Saree Zig Zag",textAlign: TextAlign.center,)),
-              ],
-            ),
-          ),), GestureDetector(
-    // When the child is tapped, show a snackbar.
-    onTap: () {Navigator.push(
-    context,
-    MaterialPageRoute(builder: (context) => saree_design()));},
-    child:
-          Container(
-            decoration: BoxDecoration(
-                color: Colors.transparent,
-                borderRadius: BorderRadius.all(Radius.circular(12))),
-            child: Column(
-              children: [
-                Expanded(
-                  flex: 9,
-                  child: ClipRRect(
-                      borderRadius: BorderRadius.all(Radius.circular(12)),
-                      child: Image.asset('assets/images/Rectangle 544.png',
-                          fit: BoxFit.fill)),
-                ),
-                Expanded(flex: 5, child: Text("Saree Falls",textAlign: TextAlign.center,)),
-              ],
-            ),
-          ),),
-
+          TabBarWidget(
+            asset: 'assets/images/Rectangle 540.png',
+            text: 'Saree Krosha',
+          ),
+          TabBarWidget(
+            asset: 'assets/images/Rectangle 542.png',
+            text: 'Saree Zig Zag',
+          ),
+          TabBarWidget(
+            asset: 'assets/images/Rectangle 544.png',
+            text: 'Saree Falls',
+          ),
         ]);
     return DefaultTabController(
       length: 4,
       child: Scaffold(
         appBar: AppBar(
+          automaticallyImplyLeading: false,
+          toolbarHeight: 35,
           elevation: 0.0,
-          backgroundColor: Color.fromRGBO(244, 248, 252, 1),
-          title: TabBar(
-            indicator: BoxDecoration(
-                borderRadius: BorderRadius.circular(50),
-                // Creates border
-                color: Color.fromRGBO(24, 16, 89, 1)),
-            unselectedLabelColor: Color.fromRGBO(151, 151, 151, 1),
-            indicatorColor: Colors.white,
-            tabs: [
-              Tab(text: 'Blouses',),
-              Tab(text: 'Tops',),
-              Tab(text: 'Bottom',),
-              Tab(text: 'Others',)
+          backgroundColor: Color(0xffF4F8FC),
+          title: Container(
+            height: 30,
+            child: TabBar(
+              indicator: BoxDecoration(
+                  borderRadius: BorderRadius.circular(50),
+                  // Creates border
+                  color: Color.fromRGBO(24, 16, 89, 1)),
+              unselectedLabelColor: Color.fromRGBO(151, 151, 151, 1),
+              indicatorColor: Colors.white,
+              tabs: [
+                Tab(
+                  text: 'Blouses',
+                ),
+                Tab(
+                  text: 'Tops',
+                ),
+                Tab(
+                  text: 'Bottom',
+                ),
+                Tab(
+                  text: 'Others',
+                )
+              ],
+            ),
+          ),
+        ),
+        body: Container(
+          child: TabBarView(
+            children: [
+              gridView1,
+              gridView2,
+              gridView3,
+              gridView4,
             ],
           ),
-
         ),
-        body:
-        TabBarView(
+      ),
+    );
+  }
+}
+
+class TabBarWidget extends StatelessWidget {
+  final String asset;
+  final String text;
+  const TabBarWidget({
+    this.asset,
+    this.text,
+    key,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return GestureDetector(
+      // When the child is tapped, show a snackbar.
+      onTap: () {
+        Navigator.push(
+            context, MaterialPageRoute(builder: (context) => input_sample()));
+      },
+      child: Container(
+        decoration:
+            BoxDecoration(borderRadius: BorderRadius.all(Radius.circular(20)),),
+        child: Column(
           children: [
-            gridView1,
-            gridView2,
-            gridView3,
-            gridView4,
+            Container(
+              height: 100,
+              decoration: BoxDecoration(
+                  border: Border.all(
+                    color: Color(0xff8BCAFF),
+                  ),
+                  borderRadius: BorderRadius.circular(30)),
+              child: Padding(
+                padding: const EdgeInsets.all(6.0),
+                child: ClipRRect(
+                  borderRadius: BorderRadius.all(Radius.circular(12)),
+                  child: Image.asset(
+                    asset,
+                    fit: BoxFit.fill,
+                    height: 60,
+                  ),
+                ),
+              ),
+            ),
+            Expanded(
+                flex: 3,
+                child: Text(
+                  text,
+                  textAlign: TextAlign.center,
+                  style: TextStyle(
+                      color: Color(0xff280D78),
+                      fontSize: 12,
+                      fontWeight: FontWeight.w500),
+                )),
           ],
         ),
-
       ),
-    );}}
+    );
+  }
+}

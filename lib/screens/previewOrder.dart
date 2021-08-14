@@ -5,12 +5,12 @@ import 'package:quikieappps1/blouse/design/select_front_design.dart';
 import 'package:toggle_switch/toggle_switch.dart';
 import 'package:quikieappps1/assets/colors.dart';
 
-class PreviewOrder extends StatefulWidget {
+class PreviewOrders extends StatefulWidget {
   @override
-  _PreviewOrderState createState() => _PreviewOrderState();
+  _PreviewOrdersState createState() => _PreviewOrdersState();
 }
 
-class _PreviewOrderState extends State<PreviewOrder> {
+class _PreviewOrdersState extends State<PreviewOrders> {
   dynamic status = [true, true, true, true];
 
   Widget picWithHead(String head, String subHead) {
@@ -42,6 +42,7 @@ class _PreviewOrderState extends State<PreviewOrder> {
               decoration: BoxDecoration(
                   color: Color.fromRGBO(196, 196, 196, 1),
                   borderRadius: BorderRadius.circular(20)),
+                  child: Image.asset('assets/images/Click Open Gallery.png',fit: BoxFit.fill,),
             )
           ],
         ),
