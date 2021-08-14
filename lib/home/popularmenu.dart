@@ -13,7 +13,7 @@ class Tabview extends StatelessWidget {
       padding: const EdgeInsets.all(10),
       crossAxisSpacing: 1,
       mainAxisSpacing: 20,
-      crossAxisCount: 3,
+      crossAxisCount: 4,
       children: <Widget>[
         TabBarWidget(
           asset: 'assets/images/Rectangle 540.png',
@@ -50,7 +50,7 @@ class Tabview extends StatelessWidget {
       padding: const EdgeInsets.all(10),
       crossAxisSpacing: 2,
       mainAxisSpacing: 20,
-      crossAxisCount: 3,
+      crossAxisCount: 4,
       children: <Widget>[
         TabBarWidget(
           asset: 'assets/images/Rectangle 540.png',
@@ -83,7 +83,7 @@ class Tabview extends StatelessWidget {
       padding: const EdgeInsets.all(10),
       crossAxisSpacing: 2,
       mainAxisSpacing: 20,
-      crossAxisCount: 3,
+      crossAxisCount: 4,
       children: <Widget>[
         TabBarWidget(
           asset: 'assets/images/Rectangle 540.png',
@@ -116,7 +116,7 @@ class Tabview extends StatelessWidget {
         padding: const EdgeInsets.all(10),
         crossAxisSpacing: 10,
         mainAxisSpacing: 20,
-        crossAxisCount: 3,
+        crossAxisCount: 4,
         children: <Widget>[
           TabBarWidget(
             asset: 'assets/images/Rectangle 540.png',
