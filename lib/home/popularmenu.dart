@@ -11,9 +11,9 @@ class Tabview extends StatelessWidget {
     var gridView1 = GridView.count(
       primary: false,
       padding: const EdgeInsets.all(10),
-      crossAxisSpacing: 1,
-      mainAxisSpacing: 20,
-      crossAxisCount: 3,
+      crossAxisSpacing: 12,
+      mainAxisSpacing: 30,
+      crossAxisCount: 4,
       children: <Widget>[
         TabBarWidget(
           asset: 'assets/images/Rectangle 540.png',
@@ -50,7 +50,7 @@ class Tabview extends StatelessWidget {
       padding: const EdgeInsets.all(10),
       crossAxisSpacing: 2,
       mainAxisSpacing: 20,
-      crossAxisCount: 3,
+      crossAxisCount: 4,
       children: <Widget>[
         TabBarWidget(
           asset: 'assets/images/Rectangle 540.png',
@@ -83,7 +83,7 @@ class Tabview extends StatelessWidget {
       padding: const EdgeInsets.all(10),
       crossAxisSpacing: 2,
       mainAxisSpacing: 20,
-      crossAxisCount: 3,
+      crossAxisCount: 4,
       children: <Widget>[
         TabBarWidget(
           asset: 'assets/images/Rectangle 540.png',
@@ -116,7 +116,7 @@ class Tabview extends StatelessWidget {
         padding: const EdgeInsets.all(10),
         crossAxisSpacing: 10,
         mainAxisSpacing: 20,
-        crossAxisCount: 3,
+        crossAxisCount: 4,
         children: <Widget>[
           TabBarWidget(
             asset: 'assets/images/Rectangle 540.png',
@@ -199,18 +199,18 @@ class TabBarWidget extends StatelessWidget {
       },
       child: Container(
         decoration:
-            BoxDecoration(borderRadius: BorderRadius.all(Radius.circular(20)),),
+            BoxDecoration(borderRadius: BorderRadius.all(Radius.circular(10)),),
         child: Column(
           children: [
             Container(
-              height: 100,
+              height: 70,
               decoration: BoxDecoration(
                   border: Border.all(
                     color: Color(0xff8BCAFF),
                   ),
                   borderRadius: BorderRadius.circular(30)),
               child: Padding(
-                padding: const EdgeInsets.all(6.0),
+                padding: const EdgeInsets.all(7.0),
                 child: ClipRRect(
                   borderRadius: BorderRadius.all(Radius.circular(12)),
                   child: Image.asset(
