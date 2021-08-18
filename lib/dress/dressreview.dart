@@ -510,7 +510,7 @@ class dressreviewState extends State<dressreview> {
                               Row(
                                 mainAxisAlignment: MainAxisAlignment.spaceAround,
                                 children: [
-                                  Column(children: [Text('PIPING'), Text('NO')]),
+                                  Column(children: [Text('PIPING'), Text('NO',style: TextStyle(color: Color.fromRGBO(3,43,119,10)))]),
                                   DottedLine(
                                     direction: Axis.vertical,
                                     lineLength: 52,
@@ -522,7 +522,7 @@ class dressreviewState extends State<dressreview> {
                                     dashGapColor: Colors.transparent,
                                     dashGapRadius: 0.0,
                                   ),
-                                  Column(children: [Text('ZIP'), Text('Front')]),
+                                  Column(children: [Text('ZIP'), Text('Front',style: TextStyle(color: Color.fromRGBO(3,43,119,10)))]),
                                   DottedLine(
                                     direction: Axis.vertical,
                                     lineLength: 52,
@@ -534,7 +534,7 @@ class dressreviewState extends State<dressreview> {
                                     dashGapColor: Colors.transparent,
                                     dashGapRadius: 0.0,
                                   ),
-                                  Column(children: [Text('HOOKS'), Text('No')]),
+                                  Column(children: [Text('HOOKS'), Text('No',style: TextStyle(color: Color.fromRGBO(3,43,119,10)))]),
                                 ],
                               ),
                               SizedBox(
@@ -622,7 +622,7 @@ class MeasurementWidget extends StatelessWidget {
         children: [
           Container(
             width: 150,
-            child: Column(children: [Text(text1), Text(text2)]),
+            child: Column(children: [Text(text1,style: TextStyle(color: Color.fromRGBO(3,43,119,10)),), Text(text2,style: TextStyle(color:Color.fromRGBO(210,85,90,10),))]),
           ),
           Center(
             child: DottedLine(
@@ -639,7 +639,7 @@ class MeasurementWidget extends StatelessWidget {
           ),
           Container(
             width: 150,
-            child: Column(children: [Text(text3), Text(text4)]),
+            child: Column(children: [Text(text3,style: TextStyle(color: Color.fromRGBO(3,43,119,10))), Text(text4,style: TextStyle(color: Color.fromRGBO(3,43,119,10)))]),
           ),
         ],
       ),

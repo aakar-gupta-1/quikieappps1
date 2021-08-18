@@ -1,5 +1,6 @@
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:quikieappps1/assets/colors.dart';
+import 'package:quikieappps1/blouse/after_selection.dart';
 import 'package:quikieappps1/dress/dress_measurement.dart';
 import 'package:quikieappps1/dress/design/select_back_design.dart';
 import 'package:quikieappps1/screens/previewOrder.dart';
@@ -97,11 +98,18 @@ class select_front_designState extends State<select_front_design> {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        Container(
+        InkWell(
+        onTap: (){
+      Navigator.push(
+          context,
+          MaterialPageRoute(
+              builder: (context) => After_Selection_image()));
+    },
+        child:Container(
           height: 250,
           decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(10), color: darkGrey),
-        ),
+        ),),
         Padding(
           padding: const EdgeInsets.only(top: 2, left: 5, bottom: 10),
           child: Text(
@@ -118,11 +126,19 @@ class select_front_designState extends State<select_front_design> {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
+        InkWell(
+        onTap: (){
+      Navigator.push(
+          context,
+          MaterialPageRoute(
+              builder: (context) => After_Selection_image()));
+    },
+    child:
         Container(
           height: 195,
           decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(10), color: darkGrey),
-        ),
+        ),),
         Padding(
           padding: const EdgeInsets.only(top: 2, left: 5, bottom: 10),
           child: Text(text, style: TextStyle(fontSize: 10)),
@@ -229,16 +245,33 @@ class select_front_designState extends State<select_front_design> {
                 child: Row(
                   children: [
                     Expanded(
-                      child: Column(
+                      child:InkWell(
+                        onTap: (){
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => After_Selection_image()));
+                        },
+
+                        child:Column(
                         children: [
                           design("Scrlet Blouse Design"),
                           design("Scrlet Blouse Design"),
                           design("Scrlet Blouse Design")
                         ],
-                      ),
+                      ),),
                     ),
                     SizedBox(width: 6),
                     Expanded(
+                      child:InkWell(
+                        onTap: (){
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => After_Selection_image()));
+                        },
+
+
                       child: Column(
                         mainAxisAlignment: MainAxisAlignment.start,
                         children: [
@@ -248,7 +281,7 @@ class select_front_designState extends State<select_front_design> {
                           SizedBox(height: 50)
                         ],
                       ),
-                    )
+                    )),
                   ],
                 ),
               )
