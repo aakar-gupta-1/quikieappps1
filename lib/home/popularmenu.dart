@@ -10,8 +10,8 @@ class Tabview extends StatelessWidget {
   Widget build(BuildContext context) {
     var gridView1 = GridView.count(
       primary: false,
-      padding: const EdgeInsets.all(10),
-      crossAxisSpacing: 12,
+      padding: const EdgeInsets.all(1),
+      crossAxisSpacing: 1,
       mainAxisSpacing: 30,
       crossAxisCount: 4,
       children: <Widget>[
@@ -210,7 +210,7 @@ class TabBarWidget extends StatelessWidget {
                   ),
                   borderRadius: BorderRadius.circular(30)),
               child: Padding(
-                padding: const EdgeInsets.all(7.0),
+                padding: const EdgeInsets.all(5.0),
                 child: ClipRRect(
                   borderRadius: BorderRadius.all(Radius.circular(12)),
                   child: Image.asset(

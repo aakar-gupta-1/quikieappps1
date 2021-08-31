@@ -1,16 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:quikieappps1/customer/addcustomer.dart';
-import 'package:quikieappps1/customer/selectcustomer.dart';
-import 'package:quikieappps1/blouse/design/design.dart';
-import 'package:quikieappps1/blouse/design/select_front_design.dart';
 import 'package:quikieappps1/home/popularmenu.dart';
 import 'package:quikieappps1/home/todaycustomers.dart';
-import 'package:quikieappps1/blouse/input_sample.dart';
-import 'package:quikieappps1/orders/orders.dart';
-import 'package:quikieappps1/widgets/custom_bottom_navbar.dart';
-import 'package:quikieappps1/assets/colors.dart';
 
 class HomePageScreen extends StatefulWidget {
   @override
@@ -89,7 +79,7 @@ class _HomePageScreenState extends State<HomePageScreen> {
                             ),
                           ),
                           Align(
-                            alignment: Alignment(-0.9, -0.85),
+                            alignment: Alignment(-0.95, -0.85),
                             child: Text(
                               "Today",
                               style: TextStyle(

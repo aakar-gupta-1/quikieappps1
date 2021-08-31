@@ -1,6 +1,6 @@
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:quikieappps1/assets/colors.dart';
-import 'package:quikieappps1/blouse/after_selection.dart';
+import 'package:quikieappps1/blouse/design/after_selection.dart';
 import 'package:quikieappps1/dress/dress_measurement.dart';
 import 'package:quikieappps1/dress/design/select_back_design.dart';
 import 'package:quikieappps1/screens/previewOrder.dart';

@@ -51,20 +51,24 @@ class _BottomNavigationState extends State<BottomNavigation> {
             // ],
           ),
           child: BottomNavigationBar(
+            selectedLabelStyle: TextStyle(fontSize: 0),
+        unselectedLabelStyle: TextStyle(fontSize: 0),
+            showSelectedLabels: false,   // <-- HERE
+          showUnselectedLabels: false, 
             elevation: 0,
             type: BottomNavigationBarType.fixed,
             items: const <BottomNavigationBarItem>[
               BottomNavigationBarItem(
-                  icon:Icon(Icons.store,), label: "Store"),
+                  icon: ImageIcon(AssetImage('assets/images/Home.png',)),label: ''),
               BottomNavigationBarItem(
-                   icon: Icon(Icons.monetization_on_outlined,),label: 'Orders'),
+                   icon: ImageIcon(AssetImage('assets/images/Order (1).png',)),label: ''),
               BottomNavigationBarItem(
-                  icon: Icon(Icons.design_services_outlined,), label: 'Designs'),
+                  icon: ImageIcon(AssetImage('assets/images/Design.png',)), label: ''),
               BottomNavigationBarItem(
-                 icon: Icon(Icons.people_rounded), label: 'Customers'),
+                 icon: ImageIcon(AssetImage('assets/images/Customer.png',),size: 50,), label: ''),
             ],
             currentIndex: _selectedTab,
-            iconSize: 25,
+            iconSize: 35,
             onTap: (i) => _handleIndexChanged(i),
           ),
         ),
