@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:quikieappps1/blouse/after_selection.dart';
+import 'package:quikieappps1/blouse/design/after_selection.dart';
 
 import 'package:quikieappps1/blouse/design/design.dart';
 import 'package:quikieappps1/blouse/measurement.dart';
