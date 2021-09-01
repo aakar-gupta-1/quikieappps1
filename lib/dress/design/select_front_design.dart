@@ -1,13 +1,10 @@
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:quikieappps1/assets/colors.dart';
-import 'package:quikieappps1/blouse/after_selection.dart';
+import 'package:quikieappps1/dress/after_selection.dart';
 import 'package:quikieappps1/dress/dress_measurement.dart';
 import 'package:quikieappps1/dress/design/select_back_design.dart';
 import 'package:quikieappps1/screens/previewOrder.dart';
 import 'package:flutter/material.dart';
-
-import 'package:quikieappps1/blouse/input_sample.dart';
-import 'package:quikieappps1/widgets/custom_bottom_navbar.dart';
 
 class select_front_design extends StatefulWidget {
   @override
@@ -255,9 +252,27 @@ class select_front_designState extends State<select_front_design> {
 
                         child:Column(
                         children: [
-                          design("Scrlet Blouse Design"),
-                          design("Scrlet Blouse Design"),
-                          design("Scrlet Blouse Design")
+                            GestureDetector(onTap: () {
+              Navigator.push(
+              context,
+              MaterialPageRoute(builder: (context) => After_Selection_image()),
+              );
+              },
+                child:design("Scrlet Blouse Design"),),
+      GestureDetector(onTap: () {
+        Navigator.push(
+          context,
+          MaterialPageRoute(builder: (context) => After_Selection_image()),
+        );
+      },
+        child:design("Scrlet Blouse Design"),),
+      GestureDetector(onTap: () {
+        Navigator.push(
+          context,
+          MaterialPageRoute(builder: (context) => After_Selection_image()),
+        );
+      },
+        child: design("Scrlet Blouse Design")),
                         ],
                       ),),
                     ),
@@ -275,9 +290,27 @@ class select_front_designState extends State<select_front_design> {
                       child: Column(
                         mainAxisAlignment: MainAxisAlignment.start,
                         children: [
-                          designSmall("Scrlet Blouse Design"),
-                          design("Scrlet Blouse Design"),
-                          design("Scrlet Blouse Design"),
+    GestureDetector(onTap: () {
+    Navigator.push(
+    context,
+    MaterialPageRoute(builder: (context) => After_Selection_image()),
+    );
+    },
+    child:designSmall("Scrlet Blouse Design"),),
+    GestureDetector(onTap: () {
+    Navigator.push(
+    context,
+    MaterialPageRoute(builder: (context) => After_Selection_image()),
+    );
+    },
+    child:design("Scrlet Blouse Design"),),
+    GestureDetector(onTap: () {
+    Navigator.push(
+    context,
+    MaterialPageRoute(builder: (context) => After_Selection_image()),
+    );
+    },
+    child:design("Scrlet Blouse Design"),),
                           SizedBox(height: 50)
                         ],
                       ),
@@ -294,7 +327,9 @@ class select_front_designState extends State<select_front_design> {
           selectedItemColor: Color.fromRGBO(69, 89, 210, 10),
           unselectedItemColor: Colors.black54,
           onTap: (int val) {
-            setState(() {
+            setState(
+
+                    () {
               _index = val;
             });
 
@@ -306,6 +341,8 @@ class select_front_designState extends State<select_front_design> {
               // Navigator.push(context, PageTransition(type: PageTransitionType.downToUp, child: DailyLiaScreen()));
             }
             if (val == 1) {
+
+
               Navigator.push(
                 context,
                 MaterialPageRoute(builder: (context) => select_back_design()),

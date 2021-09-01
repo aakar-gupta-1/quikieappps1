@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_switch/flutter_switch.dart';
+import 'package:quikieappps1/blouse/Drawing_Pad.dart';
 import 'package:quikieappps1/screens/hangings.dart';
 import 'package:quikieappps1/screens/placeOrder.dart';
 import 'package:quikieappps1/blouse/design/select_front_design.dart';
@@ -318,17 +319,15 @@ class _PreviewOrdersState extends State<PreviewOrders> {
                             SizedBox(height: 5),
                             Divider(),
                             SizedBox(height: 10),
+
                             Row(
                               children: [
-                                GestureDetector(onTap: (){Navigator.push(
-                                  context,
-                                  MaterialPageRoute(builder: (context) => Hangings()),
-                                );},
-                                  child:picWithHead('HANGINGS',
-                                    'Select or upload hanging or else leave blank'),),
-                                picWithHead('DRAWING PAD',
+                                picWithHead('HANGINGS',
+                                    'Select or upload hanging or else leave blank'),
+
+   picWithHead('DRAWING PAD',
                                     'You can draw pattern or type any text here')
-                              ],
+    ],
                             ),
                             Divider(),
                           ],

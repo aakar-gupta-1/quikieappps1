@@ -410,9 +410,13 @@ class _PlaceOrderState extends State<PlaceOrder> {
                                               "assets/images/Edit Order.svg",
                                             ),
                                           ),
-                                          SvgPicture.asset(
+                                      InkWell(
+                                        onTap: (){
+                                          Navigator.push(context, MaterialPageRoute(builder: (context)=>PreviewOrders()));
+                                        },
+                                        child:SvgPicture.asset(
                                             "assets/images/Duplicate.svg",
-                                          ),
+                                          ),),
                                         ],
                                       ),
                                     )

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:quikieappps1/assets/colors.dart';
+import 'package:quikieappps1/blouse/after_selection.dart';
 import 'package:quikieappps1/blouse/measurement.dart';
 import 'package:quikieappps1/blouse/design/select_front_design.dart';
 import 'package:quikieappps1/blouse/design/select_sleeve_design.dart';
@@ -211,9 +212,28 @@ class select_back_designState extends State<select_back_design> {
                     Expanded(
                       child: Column(
                         children: [
-                          design("Scrlet Blouse Design"),
-                          design("Scrlet Blouse Design"),
-                          design("Scrlet Blouse Design")
+                          GestureDetector(onTap: () {
+                               Navigator.push(
+                                   context,
+                                MaterialPageRoute(builder: (context) => After_Selection_image()),
+                                  );
+                                   },
+                            child:design("Scrlet Blouse Design"),),
+          GestureDetector(onTap: () {
+            Navigator.push(
+              context,
+              MaterialPageRoute(builder: (context) => After_Selection_image()),
+            );
+          },
+            child:design("Scrlet Blouse Design"),),
+          GestureDetector(onTap: () {
+            Navigator.push(
+              context,
+              MaterialPageRoute(builder: (context) => After_Selection_image()),
+            );
+          },
+            child:
+                          design("Scrlet Blouse Design")),
                         ],
                       ),
                     ),
@@ -222,9 +242,27 @@ class select_back_designState extends State<select_back_design> {
                       child: Column(
                         mainAxisAlignment: MainAxisAlignment.start,
                         children: [
-                          designSmall("Scrlet Blouse Design"),
-                          design("Scrlet Blouse Design"),
-                          design("Scrlet Blouse Design"),
+                          GestureDetector(onTap: () {
+                    Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => After_Selection_image()),
+                    );
+                    },
+                      child:designSmall("Scrlet Blouse Design"),),
+      GestureDetector(onTap: () {
+        Navigator.push(
+          context,
+          MaterialPageRoute(builder: (context) => After_Selection_image()),
+        );
+      },
+        child:design("Scrlet Blouse Design"),),
+      GestureDetector(onTap: () {
+        Navigator.push(
+          context,
+          MaterialPageRoute(builder: (context) => After_Selection_image()),
+        );
+      },
+        child:design("Scrlet Blouse Design"),),
                           SizedBox(height: 50)
                         ],
                       ),

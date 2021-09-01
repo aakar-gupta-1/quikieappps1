@@ -227,7 +227,7 @@ class _HomePageScreenState extends State<HomePageScreen> {
                               color: Colors.white,
                             ),
                             Container(
-                              height: height,
+                              height: MediaQuery.of(context).size.height*0.4,
                               width: MediaQuery.of(context).size.width,
                               child: Tabview(),
                             ),

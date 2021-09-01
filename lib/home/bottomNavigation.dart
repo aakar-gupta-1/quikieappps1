@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:quikieappps1/blouse/after_selection.dart';
+
 import 'package:quikieappps1/blouse/design/design.dart';
 import 'package:quikieappps1/blouse/measurement.dart';
 import 'package:quikieappps1/customer/selectcustomer.dart';
@@ -31,7 +33,7 @@ class _BottomNavigationState extends State<BottomNavigation> {
       HomePageScreen(),
       Orders(),
       Design(),
-      selectcustomer(),
+      After_Selection_image(),
     ];
     return Scaffold(
       body: PageView(

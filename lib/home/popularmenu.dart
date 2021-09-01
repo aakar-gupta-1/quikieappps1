@@ -10,7 +10,7 @@ class Tabview extends StatelessWidget {
   Widget build(BuildContext context) {
     var gridView1 = GridView.count(
       primary: false,
-      padding: const EdgeInsets.all(10),
+      padding: const EdgeInsets.all(5),
       crossAxisSpacing: 12,
       mainAxisSpacing: 30,
       crossAxisCount: 4,
@@ -47,7 +47,7 @@ class Tabview extends StatelessWidget {
     );
     var gridView2 = GridView.count(
       primary: false,
-      padding: const EdgeInsets.all(10),
+      padding: const EdgeInsets.all(5),
       crossAxisSpacing: 2,
       mainAxisSpacing: 20,
       crossAxisCount: 4,
@@ -80,7 +80,7 @@ class Tabview extends StatelessWidget {
     );
     var gridView3 = GridView.count(
       primary: false,
-      padding: const EdgeInsets.all(10),
+      padding: const EdgeInsets.all(5),
       crossAxisSpacing: 2,
       mainAxisSpacing: 20,
       crossAxisCount: 4,
@@ -113,7 +113,7 @@ class Tabview extends StatelessWidget {
     );
     var gridView4 = GridView.count(
         primary: false,
-        padding: const EdgeInsets.all(10),
+        padding: const EdgeInsets.all(5),
         crossAxisSpacing: 10,
         mainAxisSpacing: 20,
         crossAxisCount: 4,
@@ -203,14 +203,14 @@ class TabBarWidget extends StatelessWidget {
         child: Column(
           children: [
             Container(
-              height: 70,
+              height: 50,
               decoration: BoxDecoration(
                   border: Border.all(
                     color: Color(0xff8BCAFF),
                   ),
                   borderRadius: BorderRadius.circular(30)),
               child: Padding(
-                padding: const EdgeInsets.all(7.0),
+                padding: const EdgeInsets.all(5.0),
                 child: ClipRRect(
                   borderRadius: BorderRadius.all(Radius.circular(12)),
                   child: Image.asset(

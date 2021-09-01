@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:quikieappps1/assets/colors.dart';
 import 'package:quikieappps1/blouse/measurement.dart';
+import 'package:quikieappps1/dress/after_selection.dart';
 import 'package:quikieappps1/dress/design/select_back_design.dart';
 import 'package:quikieappps1/dress/previewOrder.dart';
 
@@ -225,9 +226,27 @@ class select_sleeve_designState extends State<select_sleeve_design> {
                     Expanded(
                       child: Column(
                         children: [
-                          design("Scrlet Blouse Design"),
-                          design("Scrlet Blouse Design"),
-                          design("Scrlet Blouse Design")
+                    GestureDetector(onTap: () {
+              Navigator.push(
+              context,
+              MaterialPageRoute(builder: (context) => After_Selection_image()),
+              );
+              },
+                child:design("Scrlet Blouse Design"),),
+      GestureDetector(onTap: () {
+        Navigator.push(
+          context,
+          MaterialPageRoute(builder: (context) => After_Selection_image()),
+        );
+      },
+        child:design("Scrlet Blouse Design"),),
+      GestureDetector(onTap: () {
+        Navigator.push(
+          context,
+          MaterialPageRoute(builder: (context) => After_Selection_image()),
+        );
+      },
+        child:design("Scrlet Blouse Design")),
                         ],
                       ),
                     ),
