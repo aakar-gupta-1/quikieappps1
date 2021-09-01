@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
+// ignore: must_be_immutable
 class Todaycustomers extends StatelessWidget {
   double width, height = 57.0;
   double customFontSize = 12;
@@ -10,7 +11,7 @@ class Todaycustomers extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return Container(  
       height: 100,
       width: double.infinity,
       child: ListView(
@@ -18,11 +19,12 @@ class Todaycustomers extends StatelessWidget {
         scrollDirection: Axis.horizontal,
         children: <Widget>[
           Column(
+            mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: <Widget>[
               DottedBorder(
                 borderType: BorderType.RRect,
                 radius: Radius.circular(30),
-                padding: EdgeInsets.all(6),
+                padding: EdgeInsets.all(4),
                 child: ClipRRect(
                   borderRadius: BorderRadius.all(Radius.circular(30)),
                   child: Container(
@@ -46,6 +48,7 @@ class Todaycustomers extends StatelessWidget {
             ],
           ),
           Column(
+            mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: <Widget>[
               Container(
                 width: width,
@@ -72,6 +75,7 @@ class Todaycustomers extends StatelessWidget {
             ],
           ),
           Column(
+            mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: <Widget>[
               Container(
                 width: width,
@@ -97,6 +101,7 @@ class Todaycustomers extends StatelessWidget {
             ],
           ),
           Column(
+            mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: <Widget>[
               Container(
                 width: width,
@@ -123,6 +128,7 @@ class Todaycustomers extends StatelessWidget {
             ],
           ),
           Column(
+            mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: <Widget>[
               Container(
                 width: width,
@@ -148,6 +154,7 @@ class Todaycustomers extends StatelessWidget {
             ],
           ),
           Column(
+            mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: <Widget>[
               Container(
                 width: width,

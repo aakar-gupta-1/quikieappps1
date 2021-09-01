@@ -10,8 +10,8 @@ class Tabview extends StatelessWidget {
   Widget build(BuildContext context) {
     var gridView1 = GridView.count(
       primary: false,
-      padding: const EdgeInsets.all(5),
-      crossAxisSpacing: 12,
+      padding: const EdgeInsets.all(1),
+      crossAxisSpacing: 1,
       mainAxisSpacing: 30,
       crossAxisCount: 4,
       children: <Widget>[
@@ -47,7 +47,7 @@ class Tabview extends StatelessWidget {
     );
     var gridView2 = GridView.count(
       primary: false,
-      padding: const EdgeInsets.all(5),
+      padding: const EdgeInsets.all(10),
       crossAxisSpacing: 2,
       mainAxisSpacing: 20,
       crossAxisCount: 4,
@@ -80,7 +80,7 @@ class Tabview extends StatelessWidget {
     );
     var gridView3 = GridView.count(
       primary: false,
-      padding: const EdgeInsets.all(5),
+      padding: const EdgeInsets.all(10),
       crossAxisSpacing: 2,
       mainAxisSpacing: 20,
       crossAxisCount: 4,
@@ -113,7 +113,7 @@ class Tabview extends StatelessWidget {
     );
     var gridView4 = GridView.count(
         primary: false,
-        padding: const EdgeInsets.all(5),
+        padding: const EdgeInsets.all(10),
         crossAxisSpacing: 10,
         mainAxisSpacing: 20,
         crossAxisCount: 4,
@@ -203,7 +203,7 @@ class TabBarWidget extends StatelessWidget {
         child: Column(
           children: [
             Container(
-              height: 50,
+              height: 70,
               decoration: BoxDecoration(
                   border: Border.all(
                     color: Color(0xff8BCAFF),
