@@ -1,13 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+
 import 'package:quikieappps1/assets/colors.dart';
 
 import 'package:quikieappps1/blouse/design/after_selection.dart';
 import 'package:quikieappps1/blouse/measurement.dart';
 import 'package:quikieappps1/blouse/design/select_back_design.dart';
 import 'package:quikieappps1/screens/previewOrder.dart';
-
-import 'package:quikieappps1/blouse/input_sample.dart';
 
 class select_sleeve_design extends StatefulWidget {
   @override

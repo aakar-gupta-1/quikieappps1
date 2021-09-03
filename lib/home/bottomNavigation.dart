@@ -33,7 +33,7 @@ class _BottomNavigationState extends State<BottomNavigation> {
       HomePageScreen(),
       Orders(),
       Design(),
-      After_Selection_image(),
+      selectcustomer(),
     ];
     return Scaffold(
       body: PageView(

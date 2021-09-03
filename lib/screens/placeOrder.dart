@@ -348,12 +348,12 @@ class _PlaceOrderState extends State<PlaceOrder> {
                     (newContainer == 0)
                         ? Container()
                         : Container(
-                            height: 400,
+                            height: 600,
                             child: ListView.builder(
                                 scrollDirection: Axis.vertical,
                                 itemCount: newContainer,
                                 itemBuilder: (context, index) {
-                                  return (index < 8)
+                                  return (index < 30)
                                       ? Container(
                                           margin: EdgeInsets.symmetric(vertical: 5),
                                           height: 135,
