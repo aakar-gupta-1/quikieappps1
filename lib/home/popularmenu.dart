@@ -1,9 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:quikieappps1/blouse/input_sample.dart';
-import 'package:quikieappps1/bottom/bottom_measurement.dart';
-import 'package:quikieappps1/dress/input_sample_dress.dart';
-import 'package:quikieappps1/saree/saree_design.dart';
 
 class Tabview extends StatelessWidget {
   @override
@@ -203,7 +199,7 @@ class TabBarWidget extends StatelessWidget {
         child: Column(
           children: [
             Container(
-              height: 70,
+              height: 50,
               decoration: BoxDecoration(
                   border: Border.all(
                     color: Color(0xff8BCAFF),

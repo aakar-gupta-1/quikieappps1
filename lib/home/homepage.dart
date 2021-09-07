@@ -52,7 +52,7 @@ class _HomePageScreenState extends State<HomePageScreen> {
         color: Color(0xffF4F8FC),
         child: Stack(children: [
           Container(
-              child: SingleChildScrollView(
+
                 child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
@@ -213,11 +213,11 @@ class _HomePageScreenState extends State<HomePageScreen> {
                         child: Column(
                           children: [
                             Container(
-                              height: 10,
+                              height: 1,
                               color: Colors.white,
                             ),
                             Container(
-                              height: MediaQuery.of(context).size.height*0.4,
+                              height: MediaQuery.of(context).size.height*0.3,
                               width: MediaQuery.of(context).size.width,
                               child: Tabview(),
                             ),
@@ -225,7 +225,7 @@ class _HomePageScreenState extends State<HomePageScreen> {
                         )),
                   ]))
                         ]),
-              ))
+              )
         ]),
       ),
       // bottomNavigationBar: FloatingNavbar(

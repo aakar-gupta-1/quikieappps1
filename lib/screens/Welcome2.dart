@@ -45,7 +45,9 @@ class welcomeScreen2State extends State<welcomeScreen2> {
                                   margin: EdgeInsets.only(top: 170.0),
                                   child: Image.asset(
                                     'assets/images/Logo.png',
-                                    width: 100.0,
+                                      width:163,
+                                      height: 182.23,
+
                                   ),
                                 ),
                                 Container(

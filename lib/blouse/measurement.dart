@@ -119,7 +119,11 @@ class _HomePageState extends State<HomePage> {
                           height: 10.0,
                           width: 12,
                         ),
-                        CustomHorizontalPicker(name: 'Full Length',),
+                        GestureDetector(onTap: (){
+
+                        },
+                          child:Stack(
+                          children:[CustomHorizontalPicker(name: 'Full Length',),])),
                         SizedBox(
                           height: 10.0,
                           width: 12,

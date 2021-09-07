@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:quikieappps1/blouse/input_sample.dart';
 import 'package:quikieappps1/orders/customer_order_details.dart';
 
 class CustomerOrder extends StatefulWidget {
